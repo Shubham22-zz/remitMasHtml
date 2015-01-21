@@ -1,0 +1,40 @@
+.checkImg {
+    position:relative;
+}
+.checkImg img {
+    width:90%;
+	margin-left: 5%;
+}
+.checkImg .text {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:300px;
+}
+.checkImg .senderC {
+	left: 30%;
+	top: 8%;
+}
+.checkImg .accNoC {
+	top: 89%;
+	left: 38%;
+}
+.checkImg .routingNoC {
+	top: 89%;
+	left: 17%;
+}
+
+.checkImg .recepientC {
+	top: 37%;
+	left: 38%;
+}
+
+.checkImg .amtC {
+	top: 37%;
+	left: 78%;
+}
+
+.checkImg .bankC {
+	top: 70%;
+	left: 21%;
+}

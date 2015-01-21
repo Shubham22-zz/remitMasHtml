@@ -1,0 +1,54 @@
+$(function () {
+
+   
+
+    
+
+
+
+    // data
+    var datax = [
+        { label: "Series1",  data: 10, color: getBrandColor('danger')},
+        { label: "Series2",  data: 30, color: getBrandColor('warning')},
+        { label: "Series3",  data: 90, color: getBrandColor('midnightblue')},
+        { label: "Series4",  data: 70, color: getBrandColor('info')},
+        { label: "Series5",  data: 80, color: getBrandColor('success')},
+        { label: "Series6",  data: 110, color: getBrandColor('inverse')}
+    ];
+
+
+
+    // INTERACTIVE
+        $.plot($("#interactive"), datax,
+            {
+                series: {
+                        pie: {
+                                show: true
+                        }
+                },
+                grid: {
+                        hoverable: true,
+                        clickable: true
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: true,
+                tooltipOpts: {
+                    content: "%p.0%, %s"
+                }
+
+            });
+            $("#interactive").bind("plothover", pieHover);
+
+
+    function pieHover(event, pos, obj)
+    {
+            if (!obj)
+                    return;
+            percent = parseFloat(obj.series.percent).toFixed(2);
+            $("#hover").html('<span style="font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+' ('+percent+'%)</span>');
+    }
+
+
+});
