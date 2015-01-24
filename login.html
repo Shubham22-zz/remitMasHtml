@@ -1,3 +1,13 @@
+<?php
+$hostname = "smehtaremit.remitmas.com";   // eg. mysql.yourdomain.com (unique)
+$username = "remitmas";   // the username specified when setting-up the database
+$password = "remitmas.com";   // the password specified when setting-up the database
+$database = "db_remitmas_com";   // the database name chosen when setting-up the database (unique)
+
+$link = mysql_connect($hostname,$username,$password);
+mysql_select_db($database) or die("Unable to select database");
+
+?>
 
 <!DOCTYPE html>
 <html lang="en" class="coming-soon">
@@ -76,7 +86,7 @@
 						<div class="panel-footer">
 							<div class="clearfix">
 								<a href="registration.html" class="btn btn-default pull-left">Register</a>
-								<a href="show.html" class="btn btn-primary pull-right">Login</a>
+								<a class="btn btn-primary pull-right">Login</a>
 							</div>
 						</div>
 
@@ -122,6 +132,7 @@
 <script src="javascripts/js/application.js"></script>
 <script src="javascripts/demo/demo.js"></script>
 <script src="javascripts/demo/demo-switcher.js"></script>
+<script src="javascripts/js/loginPage.js"></script>
 
     <!-- Load page level scripts-->
     
