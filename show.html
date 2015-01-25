@@ -30,6 +30,9 @@
 	<link href="javascripts/plugins/card/lib/css/card.css" type="text/css" rel="stylesheet">
 </head>
 <body class="infobar-offcanvas">
+<?php  
+	include("php/show.php");
+?>
 <header id="topnav" class="navbar navbar-inverse navbar-fixed-top clearfix" role="banner">
 	<a id="leftmenu-trigger" class="" data-toggle="tooltip" data-placement="right" title="Toggle Sidebar"></a>
 	<a class="navbar-brand" href="index.html">RemitMas</a>
@@ -293,7 +296,7 @@
 
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
-				<span class="hidden-xs">Daniela</span>
+				<span class="hidden-xs"><?php echo $Username; ?></span>
 				<img class="img-circle" src="images/avatar_06.png" alt="Dangerfield" />
 
 			</a>
@@ -325,7 +328,7 @@
 								</div>
 								<div class="tabular-cell welcome-options">
 									<span class="welcome-text">Welcome,</span>
-									<a href="#" class="name">Daniela</a>
+									<a href="#" class="name"><?php echo $Username; ?></a>
 								</div>
 							</div>
 						</div>
@@ -443,7 +446,7 @@
 			<div class="static-content">
 				<div id="dashboard" class="page-content">
 					<div class="page-heading">            
-						<h1>RemitMas Balance: <font size="6"><b>$0.00</b></font></h1>
+						<h1>RemitMas Balance: <font size="6"><b>$<?php echo $Remitmas_money; ?></b></font></h1>
 						<div class="options">
 							<div class="btn-toolbar">
 								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
@@ -536,20 +539,13 @@
 													</div>
 													<div class="panel-body">
 														<div class="col-md-13">
-															<select class="form-control" id="source">
-																<optgroup label="Colombia">
-																	<option value="AK">Colombia</option>
-																	<option value="HI">Argentina</option>
-																</optgroup>
-																<optgroup label="Peru">
-																	<option value="CA">Mexico</option>
-																	<option value="WA">El Salvador</option>
-																</optgroup>
-																<optgroup label="Dominican Republic">
-																	<option value="AZ">Guatemala</option>
-																	<option value="WY">Brazil</option>
-																</optgroup>
-
+															<select class="form-control" id="countryName">
+																<option value="COP">Columbia</option>
+																<option value="HI">El Salvador</option>
+																<option value="HI">Mexico</option>
+																<option value="HI">Guatemala</option>
+																<option value="HI">Peru</option>
+																<option value="HI">Dominican Republic</option>
 															</select>
 														</div>
 													</div>
@@ -680,20 +676,14 @@
 																					<div class="col-md-12">
 																						<div class="panel-body">
 																							<h5>Country</h5>
-																							<select class="form-control" id="source">
-																								<optgroup label="Alaskan/Hawaiian Time Zone">
-																									<option value="AK">Colombia</option>
-																									<option value="HI">Hawaii</option>
-																								</optgroup>
-																								<optgroup label="Mexico">
-																									<option value="CA">Argentina</option>
-																									<option value="WA">Brazil</option>
-																								</optgroup>
-																								<optgroup label="Mountain Time Zone">
-																									<option value="AZ">Arizona</option>
-																									<option value="WY">Wyoming</option>
-																								</optgroup>
-
+																							<select class="form-control" id="countryName">
+																									<option value="COP">Columbia</option>
+																									<option value="HI">El Salvador</option>
+																									<option value="HI">Mexico</option>
+																									<option value="HI">Guatemala</option>
+																									<option value="HI">Peru</option>
+																									<option value="HI">Dominican Republic</option>
+																								<!-- </optgroup> -->
 																							</select>
 																							<br/>
 																							<h5> Conversion Rate </h5>
