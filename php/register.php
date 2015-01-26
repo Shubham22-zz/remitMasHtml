@@ -6,7 +6,7 @@ $Email = $_POST['Email'];
 $Password = $_POST['Password'];
 $Country = $_POST['Country'];
 $sql =  "INSERT INTO Users ".
-       "(fullname,username,password, email, country) ".
+       "(fullname,username,password, email, countryCode) ".
        "VALUES ".
        "('$FullName','$Username','$Password','$Email','$Country')";
 

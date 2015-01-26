@@ -672,12 +672,13 @@
 																						<div class="panel-body">
 																							<h5>Country</h5>
 																							<select class="form-control" id="sendCountryName">
+																									<option data-cur='' value=''></option>
 																									<?php echo $CountryList; ?>
 																								<!-- </optgroup> -->
 																							</select>
 																							<br/>
 																							<h5> Conversion Rate </h5>
-																							<h4 id="convRate">1 USD = 18.52 COP</h4> 
+																							<h4 id="convRate">1 USD = ?</h4> 
 																						</div>
 																					</div>
 																				</div>
@@ -695,14 +696,14 @@
 																						<div class="panel-body">
 																							<div class="col-sm-9">
 																								<h4>USD</h4>
-																								<input type="text" class="form-control" placeholder="100.00">
+																								<input id="sendAmt" type="text" class="form-control" placeholder="100.00">
 																							</div>
 																							<div class="col-sm-7 text-center">
 																							<h4><b>=</b></h4>
 																							</div>
 																							<div class="col-sm-9">
-																								<h4 id="currency">COP</h4>
-																								<input type="text" class="form-control" placeholder="1852.00">
+																								<h4 id="currency">Currency Code</h4>
+																								<input type="text" class="form-control" placeholder="select the country first">
 																							</div>
 																						</div>
 																					</div>
