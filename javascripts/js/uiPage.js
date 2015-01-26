@@ -49,4 +49,15 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#sendCountryName').on('change',function(){
+		Currency = $("#sendCountryName option:selected").data("cur");
+		url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%3D%22USD"+ Currency + "%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+		$.get( url, function( data ) {
+		  conversionRate = data.query.results.rate.Rate;
+		  $("#convRate").text("1 USD =" +  conversionRate + " " + Currency);
+		  currencyField = $("#currency");
+		  currencyField.text(Currency);
+		  currencyField.next().attr("placeholder",100*conversionRate);
+		});
+	});
 });

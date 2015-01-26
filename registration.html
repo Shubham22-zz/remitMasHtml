@@ -19,8 +19,9 @@
 </head>
 
 <body class="focused-form">
-
-
+<?php 
+	include("php/registrationPage.php");	
+?>
 <div class="container" id="registration-form">
 	<a href="index.html" class="login-logo" style="margin-left:34%"><img src="images/logo.png"></a>
 	<div class="row">
@@ -52,12 +53,13 @@
 							<label class="col-xs-4 control-label">Country</label>
 							<div class="col-xs-8">
 								<select class="form-control" id="Country" name="Country">
-									<option value="COP">Columbia</option>
-									<option value="ElS">El Salvador</option>
-									<option value="MEX">Mexico</option>
-									<option value="GUA">Guatemala</option>
-									<option value="PER">Peru</option>
-									<option value="DOMR">Dominican Republic</option>
+									<?php 
+										if (mysqli_num_rows($retval) > 0) {
+									    	while($row = mysqli_fetch_assoc($retval)) {
+												echo "<option value=".$row["currency"]." >".$row["name"]."</option>";
+    										}
+    									}
+    								?>		
 								</select>
 							</div>
 						</div>

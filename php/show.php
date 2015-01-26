@@ -13,5 +13,19 @@
 		$Remitmas_money = $row['remitmas_money'];
 	}
 
+	$sql = "SELECT * FROM Countries";
+
+	$countriesList = mysqli_query( $conn, $sql  );
+	if(! $countriesList )
+	{
+		die('Could not access table: ' . mysqli_error($conn));
+	}
+ 	$CountryList = "";
+	if (mysqli_num_rows($countriesList) > 0) {
+    	while($row = mysqli_fetch_assoc($countriesList)) {
+			$CountryList .= "<option data-cur=".$row["currency"]." value=".$row["id"]." >".$row["name"]."</option>\n";
+			// echo "<option value=".$row["currency"]." >".$row["name"]."</option>";
+		}
+	}
 	mysqli_close($conn);
 ?>
