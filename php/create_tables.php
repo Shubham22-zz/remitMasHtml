@@ -9,7 +9,7 @@ if(! $val)
 	        fullname VARCHAR(30) NOT NULL,
 	        username VARCHAR(20) NOT NULL,
 			password VARCHAR(100) NOT NULL,
-			country_id INT(6) FOREIGN KEY REFERENCES Countries(id),
+			countryCode VARCHAR(6) NOT NULL,
 			email VARCHAR(50) NOT NULL,
 	        remitmas_money FLOAT DEFAULT 0.0,
 	        tut_point INT DEFAULT 0,
