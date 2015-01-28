@@ -146,15 +146,17 @@
         }
 
         self.finish.on('click.stepy', function(evt) {
+          return false;
           if (self.opt.finish && !methods._execute.call(that, self.opt.finish, self.steps.length - 1)) {
             evt.preventDefault();
           } else if (isForm) {
             if (onSubmit) {
+              // console.log("yayy");
               that.attr('onsubmit', onSubmit);
             } else {
               that.removeAttr('onsubmit');
             }
-
+            console.log("yayy");
             var isSubmit = self.finish.attr('type') === 'submit';
 
             if (!isSubmit && (!self.opt.validate || methods.validate.call(that, self.steps.length - 1))) {
@@ -213,7 +215,7 @@
 
       $('<a/>', attributes).on('click.stepy', function(e) {
         e.preventDefault();
-        console.log("halla bol");
+        // console.log("halla bol");
         if (!self.opt.next || methods._execute.call(that, self.opt.next, index + 1)) {
           methods.step.call(self, (index + 1) + 1);
           if(index==0){
@@ -221,11 +223,13 @@
             $('dd[name=amt]').html("<h3><strong>" + '$' + $('#sendAmt').val() + "</strong></h3>");
           }else if(index == 1) {
             $('dd[name=friend]').html("<h3><strong>" + $('.table input:checked').closest("td").next().text() + "</strong></h3>");
-            $('dd[name=email]').html("<h3><strong>" +  $('.table input:checked').closest("td").next().next().text()  + "</strong></h3>");
+            // $('dd[name=email]').html("<h3><strong>" +  $('.table input:checked').closest("td").next().next().text()  + "</strong></h3>");
             $('dd[name=edu]').html( '$' + $('#money-edu').attr('value'));
             $('dd[name=health]').html( '$' + $('#money-health').attr('value'));
             $('dd[name=housing]').html( '$' + $('#money-housing').attr('value'));
             $('dd[name=cash]').html( '$' + $('#money-cash').attr('value'));
+            $('dd[name=paymentMethod]').html("<h3><strong>" + "Debit Card" + "</strong></h3>");
+
 
           }
         }

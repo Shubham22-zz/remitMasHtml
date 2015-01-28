@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	// console.log("kuch toh hai");
+	$("#congrats_page").hide();
 	$("#send_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
@@ -11,15 +12,32 @@ $(document).ready(function() {
 
 	$('.card').card({ container: $('.card-wrapper')});
 
+
+	$.post( "php/debitCardData.php",{ id: UserId, fullname: FullName } ,function(data){
+				// alert(data);
+		var passedData = jQuery.parseJSON(data);
+		console.log(passedData);
+		cardDetails = $("#cardDetailsTable tbody");
+		cardDetails.html("");
+		for (var i = passedData.length - 1; i >= 0; i--) {
+			d = passedData[i];
+			expiry = d.expiry.split('-');
+			cardDetails.append("<tr onclick ='cardDetailClicked(this)'> <td>" + d.card_holder + "</td> <td>"+d.card_no +"</td> <td>" + expiry[1] + "/" +expiry[0].substr(2) + "</td> <td>"+d.cvv + "</td> </tr>");
+		};
+	});
+
+
 	$('#dashboardButton').click(function (event) {
 		$("#dashboard").show();
 		$("#transactions_page").hide();
+		$("#congrats_page").hide();
 		$("#data_page").hide();
 		$("#send_page").hide();
 	});
 
 	$('#sendPageButton').click(function (event) {
 		$("#dashboard").hide();
+		$("#congrats_page").hide();
 		$("#transactions_page").hide();
 		$("#data_page").hide();
 		$("#send_page").show();
@@ -27,6 +45,7 @@ $(document).ready(function() {
 
 	$('#transactionsPageButton').click(function (event) {
 		$("#dashboard").hide();
+		$("#congrats_page").hide();
 		$("#send_page").hide();
 		$("#data_page").hide();
 		$("#transactions_page").show();
@@ -34,18 +53,53 @@ $(document).ready(function() {
 
 	$('#dataPageButton').click(function (event) {
 		$("#dashboard").hide();
+		$("#congrats_page").hide();
 		$("#send_page").hide();
 		$("#transactions_page").hide();
 		$("#data_page").show();
 	});
 
+	$('#checkoutwizard .finish').click(function (event) {
+		// $(this).prop("disabled", true); 
+		$("#congrats_page").show();
+		$("#dashboard").hide();
+		$("#send_page").hide();
+		$("#transactions_page").hide();
+		$("#data_page").hide();
+		// $(this).prop("disabled", false); 
+
+	});
+
 	$('#cardType').on('change',function(){
 		if($('#cardType').val() == "Account"){
+            $('dd[name=paymentMethod]').html( "<h3><strong>" + "Account" + "</strong></h3>");
 			$("#debit_mode").hide();
 			$("#account_mode").show();
+			$.post( "php/accountData.php",{ id: UserId, fullname: FullName } ,function(data){
+				var passedData = jQuery.parseJSON(data);
+				console.log(passedData);
+				cardDetails = $("#accountDetailsTable tbody");
+				cardDetails.html("");
+				for (var i = passedData.length - 1; i >= 0; i--) {
+					d = passedData[i];
+					cardDetails.append("<tr onclick ='accountDetailClicked(this)'> <td>" + d.account_holder + "</td> <td>"+d.bank_name +"</td> <td>" + d.accoutn_no + "</td> <td>"+d.routing_no + "</td> </tr>");
+				};
+			});
 		} else {
+            $('dd[name=paymentMethod]').html( "<h3><strong>" + "Debit Card" + "</strong></h3>");
 			$("#account_mode").hide();
 			$("#debit_mode").show();
+			$.post( "php/debitCardData.php",{ id: UserId, fullname: FullName } ,function(data){
+				var passedData = jQuery.parseJSON(data);
+				// console.log(passedData);
+				cardDetails = $("#cardDetailsTable tbody");
+				cardDetails.html("");
+				for (var i = passedData.length - 1; i >= 0; i--) {
+					d = passedData[i];
+					expiry = d.expiry.split('-');
+					cardDetails.append("<tr onclick ='cardDetailClicked(this)'> <td>" + d.card_holder + "</td> <td>"+d.card_no +"</td> <td>" + expiry[1] + "/" +expiry[0].substr(2) + "</td> <td>"+d.cvv + "</td> </tr>");
+				};
+			});
 		}
 	});
 
@@ -66,15 +120,7 @@ $(document).ready(function() {
 		  currencyField.next().val($('#sendAmt').val()*conversionRate);
 	
 	});
-	// $('.irs-slider').on('mouseup',function(){
-	// 	// console.log('machaya');
-	// 	amount_divison[0] = $('#money-edu').attr('value');
-	// 	amount_divison[1] = $('#money-health').attr('value');
-	// 	amount_divison[2] = $('#money-housing').attr('value');
-	// 	amount_divison[3] = $('#money-cash').attr('value');
- // 		draw_recent_trans_graph();
-			
-	// });
+	
 
 	$('.irs').on('mouseup',function(){
 		// console.log('machaya');
@@ -90,6 +136,40 @@ $(document).ready(function() {
 
 
 });
+
+function cardDetailClicked(e){
+	child = $(e).children();
+	$('input[name=cvc]').trigger('blur');
+	$('.display').addClass('focused');
+	$('input[name=cvc]').val($(child[3]).text());
+	$('input[name=cvc]').trigger('keyup');
+	setTimeout(function() { cardDetailClicked_cont(); }, 1500);
+
+};
+
+function cardDetailClicked_cont () {
+	$('input[name=cvc]').trigger('blur');
+	$('input[name=number]').val($(child[1]).text());
+	$('input[name=number]').trigger('keyup');
+
+	$('input[name=name]').val($(child[0]).text());
+	$('input[name=name]').trigger('keyup');
+
+	$('input[name=expiry]').val($(child[2]).text());
+	$('input[name=expiry]').trigger('keyup');
+}
+
+
+function accountDetailClicked (e) {
+	// console.log(e);
+	child = $(e).children();
+	$('.senderC').text($(child[0]).text());
+	$('.amtC').text($($('dd[name=amt]')[2]).text());
+	$('.bankC').text($(child[1]).text());
+	$('.routingNoC').text($(child[3]).text());
+	$('.accNoC').text($(child[2]).text());
+}
+
 var amount_divison = new Array();
 amount_divison.push(1);
 amount_divison.push(1);

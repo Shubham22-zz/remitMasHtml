@@ -13,6 +13,7 @@
 		$Remitmas_money = $row['remitmas_money'];
 		$User_id = $row['id'];
 		$Remitmas_Points = $row['tut_point'];
+		$Fullname = $row['fullname'];
 	}
 	// $FriendsArray = array(); // 
 	// $Friend_no = 0;

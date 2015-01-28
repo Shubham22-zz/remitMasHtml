@@ -659,7 +659,7 @@
 
 										<div class="panel-body">
 											<div class="col-xs-12">
-												<form id="checkoutwizard">
+												<form id="checkoutwizard" >
 													<fieldset title="Step 1">
 														<legend>Transfer Information</legend>
 															<div class="row">
@@ -729,8 +729,8 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
-																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
-																			<dt><h3>Payment Method</h3></dt><dd></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
 																		</div>
 																	</div>
 																</div>
@@ -828,8 +828,8 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
-																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
-																			<dt><h3>Payment Method</h3></dt><dd></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
 																		</div>
 																	</div>
 																</div>
@@ -937,8 +937,10 @@
 																					<p></p>
 																					</div>
 																					<div class="row">
+																						<div class="col-sm-1">
+																						</div>
 																						<div class="col-sm-10">
-																							<div class="form-horizontal card">
+																							<div style="display: none" class="form-horizontal card">
 																								<div class="form-group">
 																									<label for="#" class="col-sm-4 control-label">Card Number</label>	
 																									<div class="col-sm-8">
@@ -964,6 +966,19 @@
 																									</div>
 																								</div>
 																							</div>
+																							<table cellpadding="0" cellspacing="0" border="0" id="cardDetailsTable" class="table table-striped">
+																							<thead>
+																								<tr>
+																									<th>Card Holder</th>
+																									<th>Card Number</th>
+																									<th>Expiry</th>
+																									<th>CVV</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																							</tbody>
+																							</table>
+																							
 																						</div>
 																					</div>
 																				</div>
@@ -978,22 +993,22 @@
 																							<div class="checkImg">
 																							  <img alt="" src="images/blank_check.jpg" />
 																							  <div class="text senderC" >
-																							   	Shubham Mehta
+																							   	
 																							  </div>
 																							  <div class="text accNoC" >
-																							   	2121212121
+																							   	
 																							  </div>
 																							  <div class="text routingNoC" >
-																							   	2222222
+																							   	
 																							  </div>
 																							  <div class="text amtC" >
-																							   	10000
+																							   	
 																							  </div>
 																							  <div class="text recepientC" >
-																							   	Steven Pallickal
+																							   	
 																							  </div>
 																							  <div class="text bankC" >
-																							   	Bank of America
+																							   	
 																							  </div>
 																							</div>
 																						</tr>
@@ -1003,29 +1018,22 @@
 																					<p></p>
 																					<p></p>
 																					</div>
-																					
 																					<div class="row">
+																						<div class="col-sm-1">
+																						</div>
 																						<div class="col-sm-10">
-																							<div class="form-horizontal ">
-																								<div class="form-group">
-																									<label for="#" class="col-sm-4 control-label">Bank Name</label>	
-																									<div class="col-sm-8">
-																										<input placeholder="Bank Name" type="text" name="bankI" class="form-control">
-																									</div>
-																								</div>
-																								<div class="form-group">
-																									<label for="#" class="col-sm-4 control-label">Account Number</label>	
-																									<div class="col-sm-8">
-																										<input placeholder="Account Number" type="text" name="accNoI" class="form-control">
-																									</div>
-																								</div>
-																								<div class="form-group">
-																									<label for="#" class="col-sm-4 control-label">Routing Number</label>	
-																									<div class="col-sm-8">
-																										<input placeholder="routing number" type="text" name="routingI" class="form-control">
-																									</div>
-																								</div>
-																							</div>
+																							<table cellpadding="0" cellspacing="0" border="0" id="accountDetailsTable" class="table table-striped">
+																								<thead>
+																									<tr>
+																										<th>Account Holder</th>
+																										<th>Bank Name</th>
+																										<th>Account No.</th>
+																										<th>Routing No.</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																								</tbody>
+																							</table>
 																						</div>
 																					</div>
 																				</div>
@@ -1047,8 +1055,8 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
-																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
-																			<dt><h3>Payment Method</h3></dt><dd></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
 																		</div>
 																	</div>
 																</div>
@@ -1377,6 +1385,44 @@
 						</div>
 					</div>
 				</div>
+				<div id="congrats_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Congratulations!</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel panel-success">
+										<div class="panel-heading">Money is on its way!</div>
+
+										<div class="panel-body">
+											<div class="col-xs-12">
+												<div class="alert alert-dismissable alert-success">
+													<i class="fa fa-fw fa-check"></i>&nbsp; <strong>Congratulations!</strong>  Your money is on its way! Your tracking number for this transaction is 12345678. A text has been sent to your recipient. You will also receive a confirmation via email and text. Thank you for using RemitMas.
+													<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+
+
+
+
+
+
+
+				</div>
 				<footer role="contentinfo">
 					<div class="clearfix">
 						<ul class="list-unstyled list-inline pull-left">
@@ -1701,6 +1747,10 @@
 	</div>
 </div>
 </body>
+<script type="text/javascript">
+	var UserId= '<?php echo $User_id ?>'; 
+	var FullName= '<?php echo $Fullname ?>'; 
+</script>
 <script src="javascripts/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
 <script src="javascripts/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
 

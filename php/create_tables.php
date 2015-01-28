@@ -30,9 +30,11 @@ if(! $val)
 {
 	$sql = "CREATE TABLE Accounts (
 	        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	        routing_no INT(20) NOT NULL,
-	        accoutn_no INT(20) NOT NULL,
+	        routing_no BIGINT UNSIGNED NOT NULL,
+	        accoutn_no BIGINT UNSIGNED NOT NULL,
 	        owner_id INT(6) UNSIGNED,
+			bank_name VARCHAR(30) NOT NULL,        
+			account_holder VARCHAR(30) NOT NULL,        
 			reg_date TIMESTAMP,
 			FOREIGN KEY(owner_id) REFERENCES Users(id)
 			)";
@@ -51,10 +53,11 @@ if(! $val)
 {
 	$sql = "CREATE TABLE DebitCards (
 	        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	        card_no INT(20) NOT NULL,
+	        card_no BIGINT UNSIGNED NOT NULL,
 	        cvv INT(3) NOT NULL,
 	        expiry DATE NOT NULL,
 	        owner_id INT(6) UNSIGNED,
+			card_holder VARCHAR(30) NOT NULL,       
 			reg_date TIMESTAMP,
 			FOREIGN KEY(owner_id) REFERENCES Users(id)
 			)";

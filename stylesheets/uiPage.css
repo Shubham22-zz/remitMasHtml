@@ -2,39 +2,45 @@
     position:relative;
 }
 .checkImg img {
-    width:90%;
-	margin-left: 5%;
+    width:78%;
+    height:200px;
+	margin-left: 11%;
+	border-radius: 15px; 
 }
 .checkImg .text {
     position:absolute;
+    text-transform: uppercase;
+	  font-size: 16px;
+	  font-weight: bold;
+	  color: white;
     top:10px;
     left:10px;
     width:300px;
 }
 .checkImg .senderC {
-	left: 30%;
+	left: 20%;
 	top: 8%;
 }
 .checkImg .accNoC {
-	top: 89%;
-	left: 38%;
+	top: 85%;
+	left: 56%;
 }
 .checkImg .routingNoC {
-	top: 89%;
-	left: 17%;
+	top: 85%;
+	left: 21%;
 }
 
 .checkImg .recepientC {
-	top: 37%;
-	left: 38%;
+	top: 24%;
+	left: 28%;
 }
 
 .checkImg .amtC {
-	top: 37%;
-	left: 78%;
+	top: 24%;
+	left: 73%;
 }
 
 .checkImg .bankC {
-	top: 70%;
-	left: 21%;
+	top: 62%;
+	left: 24%;
 }
