@@ -338,7 +338,7 @@
 						<span class="widget-heading">Explore</span>
 						<nav role="navigation" class="widget-body">
 							<ul class="acc-menu">
-								<li><a href="show.html"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+								<li id="dashboardButton"><a><i class="fa fa-home"></i><span>Dashboard</span></a></li>
 								<li id="sendPageButton"><a href="javascript:;"><i class="fa fa-columns"></i><span>Send</span></a>
 									<!-- <ul id="recepients_tab" class="acc-menu">
 
@@ -426,7 +426,7 @@
 						</nav>
 					</div>
 
-					<div class="widget stay-on-collapse">
+					<!-- <div class="widget stay-on-collapse">
 						<div class="widget-heading">Placeholder</div>
 						<nav class="widget-body">
 							<ul class="acc-menu">
@@ -438,7 +438,7 @@
 							</ul>
 					
 						</nav>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -500,7 +500,7 @@
 											</div>
 										</div>
 										<div class="tiles-body">
-											<div class="text-center percent-change">0%</div>
+											<div class="text-center percent-change"><?php echo $Remitmas_Points; ?>%</div>
 										</div>
 										<div class="tiles-footer">
 											<div class="pull-left">see tutorials</div>
@@ -517,7 +517,7 @@
 											</div>
 										</div>
 										<div class="tiles-body">
-											<div class="text-center">0</div>
+											<div class="text-center"><?php echo $Friends_no; ?></div>
 										</div>
 										<div class="tiles-footer">
 											<div class="pull-left">manage friends</div>
@@ -614,7 +614,7 @@
 														<div id="lastMonth" style="width: 100%; height: 300px; " class="centered">
 														</div>
 														<div class="text-center">
-															<h2>December 2014</h2>
+															<h2>Previous Month</h2>
 														</div>
 													</div>
 
@@ -652,8 +652,11 @@
 								<div class="col-xs-12">
 									<div class="panel panel-success">
 										<!-- <div class="panel-heading"></div> -->
-											<div class="progress">
-											<div class="progress-bar progress-bar-success" style="width: 33%"></div></div>
+											<!--#TODO Progressbar <div class="progress">
+											<div class="progress-bar progress-bar-success" style="width: 33%"></div>
+											</div> -->
+										<div class="panel-heading"></div>
+
 										<div class="panel-body">
 											<div class="col-xs-12">
 												<form id="checkoutwizard">
@@ -726,6 +729,7 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
 																			<dt><h3>Payment Method</h3></dt><dd></dd>
 																		</div>
 																	</div>
@@ -756,10 +760,10 @@
 																				<table class="table table-hover mb0">
 																					<thead>
 																						<tr>
-																							<th width="5" class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></th>
+																							<th width="5" class="vam"><div class=""></div></th>
 																							<th width="25">Name</th>
 																							<th width="35" class="hidden-xs">Email</th>
-																							<th width="50"></th>
+																							
 																						</tr>
 																					</thead>
 																					<tbody>
@@ -767,100 +771,32 @@
 																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
 																							<td>Joesph Keitt</td>
 																							<td class="hidden-xs">joseph01@xyz.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
+
+																							
 																						</tr>
 																						<tr>
 																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
 																							<td>Collin Bessette</td>
 																							<td class="hidden-xs">collb11@xyz.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
+																							
 																						</tr>
 																						<tr>
 																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
 																							<td>Anderson Corrigan</td>
 																							<td class="hidden-xs">andy91@abc.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
+																							
 																						</tr>
 																						<tr>
 																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
 																							<td>Archie Chavarria</td>
 																							<td class="hidden-xs">arch77@abc.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
+																							
 																						</tr>
 																						<tr>
 																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
 																							<td>Dirk Fino</td>
 																							<td class="hidden-xs">dif03@xyz.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
-																							<td>Ignacio Mcmaster</td>
-																							<td class="hidden-xs">andrew01@xyz.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
-																							<td>Dana Adair</td>
-																							<td class="hidden-xs">dann4@abc.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
-																							<td>John Lynn</td>
-																							<td class="hidden-xs">lynn@abc.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
-																							<td>Lloyd Klass</td>
-																							<td class="hidden-xs">lklass1@abc.com</td>
-																							<td class="vam td-btn text-right">
-																								<div class="btn-group">
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-check"></i></a>
-																									<a href="#" class="btn btn-xs btn-default"><i class="fa fa-fw fa-times"></i></a>
-																								</div>
-																							</td>
+																							
 																						</tr>
 																					</tbody>
 																				</table>
@@ -869,11 +805,11 @@
 																				<ul class="pagination pagination-sm m0 pull-right">
 																					<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
 																					<li class="active"><a href="#">1</a></li>
-																					<li><a href="#">2</a></li>
-																					<li><a href="#">3</a></li>
+																					<!-- <li><a href="#">2</a></li>
+																					<li><a href="#">3</a></li> -->
 																					<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 																				</ul>
-																				<a href="#" class="btn btn-sm btn-default pull-left">Approve Selected</a>
+																				<!-- <a href="#" class="btn btn-sm btn-default pull-left">Approve Selected</a> -->
 																			</div>
 																		</div>
 																	</div>
@@ -892,6 +828,7 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
 																			<dt><h3>Payment Method</h3></dt><dd></dd>
 																		</div>
 																	</div>
@@ -1110,6 +1047,7 @@
 																			<dt>Housing</dt><dd name="housing"></dd>
 																			<dt>Cash</dt><dd name="cash"></dd>
 																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<dt><h3>Recepient Email</h3></dt><dd name="email"></dd>
 																			<dt><h3>Payment Method</h3></dt><dd></dd>
 																		</div>
 																	</div>
@@ -1459,54 +1397,6 @@
 		</div>
 
 		<div id="widgetarea">
-			<div class="widget" id="widget-sparkline">
-				<div class="widget-heading">
-					<a href="javascript:;" data-toggle="collapse" data-target="#sparklinestats"><h4>Sparkline Stats</h4></a>
-				</div>
-				<div class="widget-body collapse in" id="sparklinestats">
-					<ul class="sparklinestats">
-						<li>
-							<div class="pull-left">
-								<h5 class="title">Total Revenue</h5>
-								<h3>$241,750 <span class="badge badge-success">+13.6%</span></h3>
-							</div>
-							<div class="pull-right">
-								<div class="sparkline" id="infobar-revenuestats"></div>
-							</div>
-						</li>
-						<li>
-							<div class="pull-left">
-								<h5 class="title">Products Sold</h5>
-								<h3>11,562 <span class="badge badge-success">+19.2%</span></h3>
-							</div>
-							<div class="pull-right">
-								<div class="sparkline" id="infobar-unitssold"></div>
-							</div>
-						</li>
-						<li>
-							<div class="pull-left">
-								<h5 class="title">Total Orders</h5>
-								<h3>1,249 <span class="badge badge-danger">-10.5%</span></h3>
-							</div>
-							<div class="pull-right">
-								<div class="sparkline" id="infobar-orders"></div>
-							</div>
-						</li>
-
-					</ul>
-				</div>
-			</div>
-
-			<div class="widget" id="widget-weather">
-				<div class="widget-heading">
-					<a href="javascript:;" data-toggle="collapse" data-target="#weatherwidget"><h4>Weather</h4></a>
-				</div>
-				<div class="widget-body collapse in" id="weatherwidget">
-					<div class="weather-container">
-						<div class="weather-widget"></div>
-					</div>
-				</div>
-			</div>
 
 			<div class="widget">
 				<div class="widget-heading">

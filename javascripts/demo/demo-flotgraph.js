@@ -54,27 +54,7 @@ $(function () {
   //           });
 
     // INTERACTIVE
-    $.plot($("#selectedTrans"), data4,
-            {
-                series: {
-                        pie: {
-                                show: true
-                        }
-                },
-                grid: {
-                        hoverable: true,
-                        clickable: true
-                },
-                legend: {
-                    show: false
-                },
-                tooltip: true,
-                tooltipOpts: {
-                    content: "%p.0%, %s"
-                }
-
-            });
-            $("#selectedTrans").bind("plothover", pieHover);
+    
 
         $.plot($("#recentTrans"), data1,
             {
@@ -213,13 +193,15 @@ $(function () {
             $("#overall2").bind("plothover", pieHover);        
 
 
-    function pieHover(event, pos, obj)
+    
+
+
+});
+
+function pieHover(event, pos, obj)
     {
             if (!obj)
                     return;
             percent = parseFloat(obj.series.percent).toFixed(2);
             $("#hover").html('<span style="font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+' ('+percent+'%)</span>');
     }
-
-
-});

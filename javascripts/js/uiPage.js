@@ -66,5 +66,63 @@ $(document).ready(function() {
 		  currencyField.next().val($('#sendAmt').val()*conversionRate);
 	
 	});
+	// $('.irs-slider').on('mouseup',function(){
+	// 	// console.log('machaya');
+	// 	amount_divison[0] = $('#money-edu').attr('value');
+	// 	amount_divison[1] = $('#money-health').attr('value');
+	// 	amount_divison[2] = $('#money-housing').attr('value');
+	// 	amount_divison[3] = $('#money-cash').attr('value');
+ // 		draw_recent_trans_graph();
+			
+	// });
+
+	$('.irs').on('mouseup',function(){
+		// console.log('machaya');
+		amount_divison[0] = $('#money-edu').attr('value');
+		amount_divison[1] = $('#money-health').attr('value');
+		amount_divison[2] = $('#money-housing').attr('value');
+		amount_divison[3] = $('#money-cash').attr('value');
+ 		draw_recent_trans_graph();
+			
+	});
+ 	
+	draw_recent_trans_graph();
+
 
 });
+var amount_divison = new Array();
+amount_divison.push(1);
+amount_divison.push(1);
+amount_divison.push(1);
+amount_divison.push(1);
+
+function draw_recent_trans_graph(){
+	var reccent_data = [
+        { label: "Education",  data: amount_divison[0], color: getBrandColor('info')},
+        { label: "Healthcare",  data: amount_divison[1], color: getBrandColor('danger')},
+        { label: "Housing",  data: amount_divison[2], color: getBrandColor('midnightblue')},
+        { label: "Cash",  data: amount_divison[3], color: getBrandColor('warning')},
+            
+    ];
+	$.plot($("#selectedTrans"), reccent_data,
+            {
+                series: {
+                        pie: {
+                                show: true
+                        }
+                },
+                grid: {
+                        hoverable: true,
+                        clickable: true
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: true,
+                tooltipOpts: {
+                    content: "%p.0%, %s"
+                }
+
+            });
+            $("#selectedTrans").bind("plothover", pieHover);
+}

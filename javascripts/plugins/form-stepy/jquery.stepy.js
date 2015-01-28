@@ -213,9 +213,21 @@
 
       $('<a/>', attributes).on('click.stepy', function(e) {
         e.preventDefault();
-
+        console.log("halla bol");
         if (!self.opt.next || methods._execute.call(that, self.opt.next, index + 1)) {
           methods.step.call(self, (index + 1) + 1);
+          if(index==0){
+            $('dd[name=country_name]').html("<h3><strong>" +  $("#sendCountryName option:selected").text() + "</strong></h3>");
+            $('dd[name=amt]').html("<h3><strong>" + '$' + $('#sendAmt').val() + "</strong></h3>");
+          }else if(index == 1) {
+            $('dd[name=friend]').html("<h3><strong>" + $('.table input:checked').closest("td").next().text() + "</strong></h3>");
+            $('dd[name=email]').html("<h3><strong>" +  $('.table input:checked').closest("td").next().next().text()  + "</strong></h3>");
+            $('dd[name=edu]').html( '$' + $('#money-edu').attr('value'));
+            $('dd[name=health]').html( '$' + $('#money-health').attr('value'));
+            $('dd[name=housing]').html( '$' + $('#money-housing').attr('value'));
+            $('dd[name=cash]').html( '$' + $('#money-cash').attr('value'));
+
+          }
         }
       }).appendTo(nav);
     }, _description: function(step) {
