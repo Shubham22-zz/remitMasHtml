@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("#send_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
-	// $("#dashboard").hide();
+	$("#savings_page").hide();
 	$("#account_mode").hide();
 	
 	$('#checkoutwizard').stepy();
@@ -32,6 +32,7 @@ $(document).ready(function() {
 		$("#transactions_page").hide();
 		$("#congrats_page").hide();
 		$("#data_page").hide();
+		$("#savings_page").hide();
 		$("#send_page").hide();
 	});
 
@@ -40,6 +41,7 @@ $(document).ready(function() {
 		$("#congrats_page").hide();
 		$("#transactions_page").hide();
 		$("#data_page").hide();
+		$("#savings_page").hide();
 		$("#send_page").show();
 	});
 
@@ -48,6 +50,7 @@ $(document).ready(function() {
 		$("#congrats_page").hide();
 		$("#send_page").hide();
 		$("#data_page").hide();
+		$("#savings_page").hide();
 		$("#transactions_page").show();
 	});
 
@@ -56,16 +59,28 @@ $(document).ready(function() {
 		$("#congrats_page").hide();
 		$("#send_page").hide();
 		$("#transactions_page").hide();
+		$("#savings_page").hide();
 		$("#data_page").show();
+	});
+
+	$('#savingsPageButton').click(function (event) {
+		$("#dashboard").hide();
+		$("#congrats_page").hide();
+		$("#send_page").hide();
+		$("#transactions_page").hide();
+		$("#data_page").hide();
+		$("#savings_page").show();
+
 	});
 
 	$('#checkoutwizard .finish').click(function (event) {
 		// $(this).prop("disabled", true); 
-		$("#congrats_page").show();
 		$("#dashboard").hide();
 		$("#send_page").hide();
 		$("#transactions_page").hide();
+		$("#savings_page").hide();
 		$("#data_page").hide();
+		$("#congrats_page").show();
 		// $(this).prop("disabled", false); 
 
 	});
@@ -133,7 +148,6 @@ $(document).ready(function() {
 	});
  	
 	draw_recent_trans_graph();
-
 
 });
 

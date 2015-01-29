@@ -11,7 +11,7 @@
 	<meta name="author" content="RemitMas">
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,700' rel='stylesheet' type='text/css'>
-
+	<!-- <link rel="stylesheet" href="stylesheets/vidstyle.css" type="text/css" media="screen" /> -->
 	<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 	 <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
 
@@ -28,6 +28,7 @@
 	<link href="javascripts/plugins/switchery/switchery.css" type="text/css" rel="stylesheet">        					<!-- Switchery -->
 	<link href="javascripts/plugins/fullcalendar/fullcalendar.css" type="text/css" rel="stylesheet"> 
 	<link href="javascripts/plugins/card/lib/css/card.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/overlay-minimal.css" type="text/css" media="screen" />
 </head>
 <body class="infobar-offcanvas">
 <?php  
@@ -352,10 +353,10 @@
 										<li><a href="placeholder.html">Budget</a></li>
 									</ul> -->
 								</li>
-								<li><a href="javascript:;"><i class="fa fa-cogs"></i><span>Savings Toolkit</span></a>
-									<ul class="acc-menu">
+								<li id="savingsPageButton" ><a href="javascript:;"><i class="fa fa-cogs"></i><span>Savings Toolkit</span></a>
+									<!-- <ul class="acc-menu">
 										<li><a href="placeholder.html">Tutorial Progress</a></li>
-									</ul>
+									</ul> -->
 								</li>
 								<li id="dataPageButton"><a href="javascript:;"><i class="fa fa-random"></i><span>Data</span></a>
 									<<!-- ul class="acc-menu">
@@ -1415,6 +1416,166 @@
 							</div>
 						</div>
 					</div>	
+				</div>
+				<div id="savings_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Product Details </h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+	
+						<div class="store">
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 10</span>Compound interest basics</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">Interest is the basis of modern capital markets. Depending on whether you are lending or borrowing, it can be viewed as a return on an asset (lending) or the cost of capital (borrowing). This tutorial gives an introduction to this fundamental concept, including what it means to compound. It also gives a rule of thumb that might make it easy to do some rough interest calculations in your head.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/Rm6UdfRs3gw?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Compound interest basics"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 8</span>Interest basics</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">This is a good introduction to the basic concept of interest. We will warn you that it is an older video so Sal's sound and handwriting weren't quite up to snuff then.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/GtaoP0skPWc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Interest basics"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 12</span>Credit cards and loans</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">Most of us have borrowed to buy something. Credit cards, in particular, can be quite convenient (but dangerous if not used in moderation). This tutorial explains credit card interest, how credit card companies make money and a far more silly way of borrowing money called "payday" loans.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/GtaoP0skPWc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Credit cards and loans"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 8</span>Cash versus accrual accounting</a></h3>
+										<span class="label label-inverse mb10">Accounting and financial statements</span>
+										<p class="mb20">Just keeping track of cash that goes in and out of a business doesn't always reflect what's going on. This tutorial compares cash and accrual accounting. Very valuable if you ever plan on starting or investing in any type of business (you might also discover a nascent passion for accounting).</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/LU_6amWC6H8?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Comparing accrual and cash accounting"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 12</span>Core financial statements</a></h3>
+										<span class="label label-inverse mb10">Accounting and financial statements</span>
+										<p class="mb20">Corporations use three financial statements to report what's going on: balance sheets, cash flow statements and income statements. They can be derived from each other and each give a valuable lens on the operations and condition of a business. After you know the basics of accrual accounting (available in another tutorial), this tutorial will give you tools you need to responsibly understand any business.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/hZvjH3Az87A?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Balance sheet and income statement relationship"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 10</span>Inflation basics</a></h3>
+										<span class="label label-inverse mb10">Inflation</span>
+										<p class="mb20">$1 went a lot further in 1900 than today (you could probably buy a good meal for the family for $1 back then). Why? And how do we measure how much more expensive things have gotten (i.e., inflation)?</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/yahEP620480?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="What is inflation"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 6</span>Inflation scenarios</a></h3>
+										<span class="label label-inverse mb10">Inflation</span>
+										<p class="mb20">You know about inflation, but now want to look at how thing might play out in different scenarios. This tutorial focuses on when inflation is "acceptable" and when it isn't (and the causes and repercussions).</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/Z_DcXewHHA8?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Moderate inflation in a good economy"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 
 
@@ -1543,206 +1704,7 @@
 				</div>
 			</div>
 
-	        <!-- <div class="widget">
-	            <div class="widget-heading">
-	                <a href="javascript:;" data-toggle="collapse" data-target="#storagespace"><h4>Storage Space</h4></a>
-	            </div>
-	            <div class="widget-body collapse in" id="storagespace">
-	                <div class="" style="padding: 20px 0">
-	                    <div class="clearfix">
-	                        <div class="progress-title pull-left">1.31 GB used</div>
-	                        <div class="progress-percentage pull-right">87.3%</div>
-	                    </div>
-	                    <div class="progress progress-lg">
-	                        <div class="progress-bar progress-bar-success" style="width: 50%"></div>
-	                        <div class="progress-bar progress-bar-warning" style="width: 25%"></div>
-	                        <div class="progress-bar progress-bar-danger" style="width: 12.3%"></div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div> -->
-
-	        <!-- <div class="widget">
-	            <div class="widget-heading">
-	                <a href="javascript:;" data-toggle="collapse" data-target="#contactdetails"><h4>Contact Details</h4></a>
-	            </div>
-	            <div class="widget-body collapse in" id="contactdetails">
-	                <div class="contactdetails">
-	                    <div class="avatar">
-	                        <img src="images/avatar_11.png" class="img-responsive img-circle">
-	                    </div>
-	                    <span class="contact-name">Joseph Vasquez</span>
-	                    <span class="contact-status">Client Representative</span>
-	                    <ul class="details">
-	                        
-	                        <li><a href="#"><i class="fa fa-fw fa-envelope-o"></i>&nbsp;p.bateman@gmail.com</a></li>
-	                        <li><i class="fa fa-fw fa-phone"></i>&nbsp;+1 234 567 890</li>
-	                        <li><i class="fa fa-fw fa-map-marker"></i>&nbsp;Hollywood Hills, California</li>
-	                        
-	                    </ul>
-
-	            </div>
-	        </div> -->
-
-	        <!-- <div class="widget">
-	            <div class="widget-heading">
-	                <a href="javascript:;" data-toggle="collapse" data-target="#contact-list"><h4>Contact List</h4></a>
-	            </div>
-	            <div class="widget-body collapse in" id="contact-list">
-	                <ul class="contact-list">
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_06.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">Jessie Pinkman</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Senior Developer</span>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_01.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">Emma Watson</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Graphic Designer</span>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_09.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">David Luke</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Client Representative</span>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_11.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">John Arren</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Project Manager</span>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_05.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">Ben Stiller</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Senior Designer</span>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        <div class="avatar">
-	                            <img src="images/avatar_08.png" class="img-responsive img-circle" />
-	                        </div>
-	                        <div class="details">
-	                            <div class="clearfix">
-	                                <a href="#" class="contact-name pull-left">Jeofry Thompson</a>
-	                                
-	                                    <div class="contact-profiles">
-	                                        <a href="javascript:;" class="dropdown-toggle profile-list" data-toggle="dropdown">
-	                                            <i class="fa fa-ellipsis-h"></i>
-	                                        </a>
-	                                        <ul class="dropdown-menu" role="menu">
-	                                            <li><a href="#"><i class="fa pull-right fa-envelope-o" style="color: #cccccc;"></i>Email</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-skype" style="color: #12a5f4;"></i>Skype</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-twitter" style="color: #00aced;"></i>Twitter</a></li>
-	                                            <li><a href="#"><i class="fa pull-right fa-linkedin" style="color: #007bb6;"></i>LinkedIn</a></li>
-	                                        </ul>
-	                                    </div>
-	                                    
-	                                
-	                            </div>
-	                            <span class="contact-details">Developer</span>
-	                        </div>
-	                    </li>
-	                </ul>
-	            </div>
-	        </div> -->
+	       
     	</div>
 	</div>
 </div>
@@ -1810,6 +1772,12 @@
 <script src="javascripts/demo/demo-flotgraph.js"></script>
 <script src="javascripts/plugins/form-stepy/jquery.stepy.js"></script>  								<!-- Stepy Plugin -->
 <script src="javascripts/plugins/card/lib/js/card.js"></script> 										<!-- Card -->
+
+<!-- <script type="text/javascript" src="javascripts/js/mootools.js"></script> -->
+<script type="text/javascript" src="javascripts/js/swfobject.js"></script>
+
+<script type="text/javascript" src="javascripts/js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="javascripts/js/videolightbox.js"></script>
 
 <script src="javascripts/js/uiPage.js"></script> 
 </html>
