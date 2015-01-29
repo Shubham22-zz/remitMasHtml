@@ -37,21 +37,11 @@ $(document).ready(function() {
 	});
 
 	$('#sendPageButton').click(function (event) {
-		$("#dashboard").hide();
-		$("#congrats_page").hide();
-		$("#transactions_page").hide();
-		$("#data_page").hide();
-		$("#savings_page").hide();
-		$("#send_page").show();
+		sendMoney();
 	});
 
 	$('#transactionsPageButton').click(function (event) {
-		$("#dashboard").hide();
-		$("#congrats_page").hide();
-		$("#send_page").hide();
-		$("#data_page").hide();
-		$("#savings_page").hide();
-		$("#transactions_page").show();
+		goToTransactions();
 	});
 
 	$('#dataPageButton').click(function (event) {
@@ -64,14 +54,22 @@ $(document).ready(function() {
 	});
 
 	$('#savingsPageButton').click(function (event) {
-		$("#dashboard").hide();
-		$("#congrats_page").hide();
-		$("#send_page").hide();
-		$("#transactions_page").hide();
-		$("#data_page").hide();
-		$("#savings_page").show();
-
+		seeTutorials();
 	});
+
+
+	$('#sendMoneyTile').click(function (event) {
+		sendMoney();
+	});
+
+	$('#transactionTile').click(function (event) {
+		goToTransactions();
+	});
+
+	$('#tutorialTile').click(function (event) {
+		seeTutorials();
+	});
+
 
 	$('#checkoutwizard .finish').click(function (event) {
 		// $(this).prop("disabled", true); 
@@ -150,6 +148,35 @@ $(document).ready(function() {
 	draw_recent_trans_graph();
 
 });
+
+function sendMoney () {
+	$("#dashboard").hide();
+	$("#congrats_page").hide();
+	$("#transactions_page").hide();
+	$("#data_page").hide();
+	$("#savings_page").hide();
+	$("#send_page").show();
+}
+
+function goToTransactions (argument) {
+	$("#dashboard").hide();
+	$("#congrats_page").hide();
+	$("#send_page").hide();
+	$("#data_page").hide();
+	$("#savings_page").hide();
+	$("#transactions_page").show();
+}
+
+function seeTutorials (argument) {
+	$("#dashboard").hide();
+	$("#congrats_page").hide();
+	$("#send_page").hide();
+	$("#transactions_page").hide();
+	$("#data_page").hide();
+	$("#savings_page").show();
+}
+
+
 
 function cardDetailClicked(e){
 	child = $(e).children();
