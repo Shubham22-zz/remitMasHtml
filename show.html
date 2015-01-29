@@ -26,7 +26,7 @@
 	<link href="javascripts/plugins/Ion.RangeSlider/css/ion.rangeSlider.skinNice.css" type="text/css" rel="stylesheet">           <!-- Ion Range Slider Default Skin -->
 	<link href="javascripts/plugins/form-daterangepicker/daterangepicker-bs3.css" type="text/css" rel="stylesheet">    	<!-- DateRangePicker -->
 	<link href="javascripts/plugins/switchery/switchery.css" type="text/css" rel="stylesheet">        					<!-- Switchery -->
-	<link href="javascripts/plugins/fullcalendar/fullcalendar.css" type="text/css" rel="stylesheet"> 
+	<!-- <link href="javascripts/plugins/fullcalendar/fullcalendar.css" type="text/css" rel="stylesheet">  -->
 	<link href="javascripts/plugins/card/lib/css/card.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheets/overlay-minimal.css" type="text/css" media="screen" />
 </head>
@@ -40,97 +40,7 @@
 	<a id="rightmenu-trigger" class="" data-toggle="tooltip" data-placement="left" title="Toggle Infobar"></a>
 	
 
-	<!-- <div class="yamm navbar-left navbar-collapse collapse">
-		<ul class="nav navbar-nav">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-random mr5"></i>About Us<span class="caret"></span></a>
-				<ul class="dropdown-menu" style="width: 900px;">
-					<li>
-						<div class="yamm-content container-sm-height">
-							<div class="row row-sm-height yamm-col-bordered">
-								<div class="col-sm-3 col-sm-height yamm-col">
-                                            
-                                    <h3 class="yamm-category">Sidebar</h3>
-                                    <ul class="list-unstyled mb20">
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>   
-                                    </ul>
-
-                                    <h3 class="yamm-category">Placeholder</h3>
-                                    <ul class="list-unstyled">
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>   
-                                    </ul>
-                                    
-                                </div>
-                                <div class="col-sm-3 col-sm-height yamm-col">
-                                    
-                                    <h3 class="yamm-category">Placeholder</h3>
-                                    <ul class="list-unstyled mb20">
-                                        <li><a href="layout-breadcrumb-top.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                    </ul>
-
-                                    <h3 class="yamm-category">Placeholder</h3>
-                                    <ul class="list-unstyled">
-                                    	<li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder </a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                    </ul>
-                                    
-                                </div>
-                                <div class="col-sm-3 col-sm-height yamm-col">
-                                    
-                                    <h3 class="yamm-category">Placeholder</h3>
-                                    <ul class="list-unstyled mb20">
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                    </ul>
-
-                                    <h3 class="yamm-category">Placeholder</h3>
-                                    <ul class="list-unstyled">
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder</a></li>
-                                        <li><a href="sublink.html">Placeholder </a></li>
-                                    </ul>
-                                    
-                                </div>
-                                <div class="col-sm-3 col-sm-height yamm-col">
-                                	<h3 class="yamm-category">RemitMas</h3>
-                                    <img src="images/demo/stockphoto/communication_12_carousel.jpg" class="mb20 img-responsive" style="width: 100%;">
-                                    <p>We are an online payment platform and mobile application that provides an easy, safe, and innovative mechanism for migrants to channel remittances into savings accounts for education, health and housing with access to incentive-based financial education training.</p>
-                                </div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<li class="dropdown" id="widget-classicmenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Placeholder<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Placeholder</a></li>
-                <li><a href="#">Placeholder</a></li>
-                <li><a href="#">Placeholder</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Placeholder</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Placeholder</a></li>
-              </ul>
-            </li>
-			<li><a href="http://remit.pallickals.com/placeholder" target="_blank">Frontend</a></li>
-			<li><a href="placeholder.html" target="_blank">Landing Page</a></li>
-		</ul>
-	</div> -->
+	
 
 	<ul class="nav navbar-nav toolbar pull-right">
 		<li class="dropdown">
@@ -365,8 +275,8 @@
 								</li>
 								<li><a href="javascript:;"><i class="fa fa-pencil"></i><span>My Profile</span></a>
 									<ul class="acc-menu">
-										<li><a href="placeholder.html">Account Details</a></li>
-										<li><a href="placeholder">Payment Details</a></li>
+										<li id="accountDetailsPageButton"><a hhref="javascript:;">Account Details</a></li>
+										<li id="paymentDetailsPageButton"><a href="javascript:;">Payment Details</a></li>
 									</ul>
 								</li>
 
@@ -930,7 +840,7 @@
 																				</div>
 																				<div class="panel-body" role="content">
 																					<div class="row">
-																						<div class="card-wrapper"></div>
+																						<div class="card-wrapper" id="card-wrapper1"></div>
 																					</div>
 																					<div class="row">
 																					<p></p>
@@ -941,7 +851,7 @@
 																						<div class="col-sm-1">
 																						</div>
 																						<div class="col-sm-10">
-																							<div style="display: none" class="form-horizontal card">
+																							<div style="display: none" class="form-horizontal card" id="card1">
 																								<div class="form-group">
 																									<label for="#" class="col-sm-4 control-label">Card Number</label>	
 																									<div class="col-sm-8">
@@ -993,22 +903,22 @@
 																						<tr>
 																							<div class="checkImg">
 																							  <img alt="" src="images/blank_check.jpg" />
-																							  <div class="text senderC" >
+																							  <div class="text senderC" id="senderC1" >
 																							   	
 																							  </div>
-																							  <div class="text accNoC" >
+																							  <div class="text accNoC" id="accNoC1" >
 																							   	
 																							  </div>
-																							  <div class="text routingNoC" >
+																							  <div class="text routingNoC" id="routingNoC1" >
 																							   	
 																							  </div>
-																							  <div class="text amtC" >
+																							  <div class="text amtC" id="amtC1" >
 																							   	
 																							  </div>
-																							  <div class="text recepientC" >
+																							  <div class="text recepientC" id="recepientC1">
 																							   	
 																							  </div>
-																							  <div class="text bankC" >
+																							  <div class="text bankC" id="bankC1">
 																							   	
 																							  </div>
 																							</div>
@@ -1078,6 +988,8 @@
 							
 					</div>
 				</div>
+				
+
 				<div id="transactions_page" class="page-content">
 					<div class="page-heading">            
 						<h1>Transactions</h1>
@@ -1347,6 +1259,9 @@
 						</div>
 					</div>
 				</div>
+				
+
+
 				<div id="data_page" class="page-content">
 					<div class="page-heading">            
 						<h1>Data</h1>
@@ -1406,6 +1321,8 @@
 						</div>
 					</div>
 				</div>
+				
+
 				<div id="congrats_page" class="page-content">
 					<div class="page-heading">            
 						<h1>Congratulations!</h1>
@@ -1437,6 +1354,8 @@
 						</div>
 					</div>	
 				</div>
+				
+
 				<div id="savings_page" class="page-content">
 					<div class="page-heading">            
 						<h1>Savings Toolkit </h1>
@@ -1610,13 +1529,250 @@
 				</div>
 
 
+				
+				<div id="payment_details_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Payment Details</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
 
+								<div class="col-xs-12">
+									<div class="panel">
+										<div class="panel-heading">Debit Card Section</div>
 
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-xs-1">
+												</div>
+												<div class="col-xs-10">
+													<table cellpadding="0" cellspacing="0" border="0" id="cardDetailsSection" class="table table-striped">
+														<thead>
+															<tr>
+																<th>Card Holder</th>
+																<th>Card Number</th>
+																<th>Expiry</th>
+																<th>CVV</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- Modal -->
+											<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															<h2 class="modal-title">Debit Card Details</h2>
+														</div>
+														<div class="modal-body">
+															<div class="row">
+																<div class="col-sm-12">
+																	<div class="card-wrapper" id="card-wrapper2"></div>
+																</div>
+															</div>
+															<div class="row">
+															<p></p>
+															<p></p>
+															<p></p>
+															<p></p>
+															</div>
+															<div class="row">
+																<div class="col-sm-1">
+																</div>
+																<div class="col-sm-8">
+																	<div class="form-horizontal card" id="card2">
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Card Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Card number" type="text" name="number" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Full Name</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Full name" type="text" name="name" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Expiry</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="MM/YY" type="text" name="expiry" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">CVC</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="CVC" type="text" name="cvc" class="form-control">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-primary">Add Card</button>
+														</div>
+													</div><!-- /.modal-content -->
+												</div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="panel-footer">
+												<div class="row">
+													<div class="col-sm-2 col-sm-offset-10">
+														<a data-toggle="modal" href="#cardModal" class="btn-primary btn">Add Debit Card</a>
+													</div>
+												</div>
+											</div>
 
+										</div>
+										
+									</div>
+								</div>
+							</div>
 
+							
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel">
+										<div class="panel-heading">Accounts Section</div>
 
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-xs-1">
+												</div>
+												<div class="col-xs-10">
+													<table cellpadding="0" cellspacing="0" border="0" id="accountDetailsSection" class="table table-striped">
+														<thead>
+															<tr>
+																<th>Account Holder</th>
+																<th>Bank Name</th>
+																<th>Account No.</th>
+																<th>Routing No.</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- Modal -->
+											<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															<h2 class="modal-title">Account Details</h2>
+														</div>
+														<div class="modal-body">
+															<div class="row">
+																<tr>
+																	<div class="checkImg">
+																	  <img alt="" src="images/blank_check.jpg" />
+																	  <div class="text senderC" id="senderC2" >
+																	   	
+																	  </div>
+																	  <div class="text accNoC" id="accNoC2">
+																	   	
+																	  </div>
+																	  <div class="text routingNoC" id="routingNoC2">
 
+																	  </div>
+																	  <div class="text bankC" id="bankC2">
+																	   		
+																	  </div>
+																	</div>
+																</tr>
+															</div>
+															<div class="row">
+															<p></p>
+															<p></p>
+															<p></p>
+															<p></p>
+															</div>
+															<div class="row">
+																<div class="col-sm-1">
+																</div>
+																<div class="col-sm-8">
+																	<div class="form-horizontal card" id="card2">
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Account Holder</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Account holder name" type="text" id="senderCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Bank Name</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Bank name" type="text" id="bankCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Account Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Account number" type="text" id="accNoCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Routing Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Routing number" type="text" id="routingNoCInput2" class="form-control">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-primary">Add Card</button>
+														</div>
+													</div><!-- /.modal-content -->
+												</div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="panel-footer">
+												<div class="row">
+													<div class="col-sm-2 col-sm-offset-10">
+														<a data-toggle="modal" href="#checkModal" class="btn-primary btn">Add Account</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				
+				<div id="account_details_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Account Details</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+						</div>
+					</div>
+				</div>
+
+
+
 				<footer role="contentinfo">
 					<div class="clearfix">
 						<ul class="list-unstyled list-inline pull-left">
@@ -1783,7 +1939,7 @@
 <script src="javascripts/plugins/powerwidgets/js/powerwidgets.js"></script> 				<!-- PowerWidgets -->
 <script src="javascripts/plugins/switchery/switchery.js"></script>     					<!-- Switchery -->
 
-<script src="javascripts/plugins/fullcalendar/fullcalendar.min.js"></script>   			<!-- FullCalendar -->
+<!-- <script src="javascripts/plugins/fullcalendar/fullcalendar.min.js"></script>   			<!-- FullCalendar --> -->
 
 <!-- Charts -->
 <script src="javascripts/plugins/charts-flot/jquery.flot.min.js"></script>             	<!-- Flot Main File -->

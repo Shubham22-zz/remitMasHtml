@@ -6,11 +6,14 @@ $(document).ready(function() {
 	$("#data_page").hide();
 	$("#savings_page").hide();
 	$("#account_mode").hide();
-	
+	$("#account_details_page").hide();
+	$("#payment_details_page").hide();
+
 	$('#checkoutwizard').stepy();
 	$('.stepy-navigator').wrapInner('<div class="pull-right"></div>');
 
-	$('.card').card({ container: $('.card-wrapper')});
+	$('#card1').card({ container: $('#card-wrapper1')});
+	$('#card2').card({ container: $('#card-wrapper2')});
 
 
 	$.post( "php/debitCardData.php",{ id: UserId, fullname: FullName } ,function(data){
@@ -28,12 +31,14 @@ $(document).ready(function() {
 
 
 	$('#dashboardButton').click(function (event) {
-		$("#dashboard").show();
 		$("#transactions_page").hide();
 		$("#congrats_page").hide();
 		$("#data_page").hide();
 		$("#savings_page").hide();
 		$("#send_page").hide();
+		$("#account_details_page").hide();
+		$("#payment_details_page").hide();
+		$("#dashboard").show();
 	});
 
 	$('#sendPageButton').click(function (event) {
@@ -50,7 +55,53 @@ $(document).ready(function() {
 		$("#send_page").hide();
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
+		$("#account_details_page").hide();
+		$("#payment_details_page").hide();
 		$("#data_page").show();
+	});
+
+	$('#paymentDetailsPageButton').click(function (event) {
+		$("#dashboard").hide();
+		$("#congrats_page").hide();
+		$("#send_page").hide();
+		$("#transactions_page").hide();
+		$("#savings_page").hide();
+		$("#account_details_page").hide();
+		$("#data_page").hide();
+		$("#payment_details_page").show();
+		$.post( "php/debitCardData.php",{ id: UserId, fullname: FullName } ,function(data){
+			var passedData = jQuery.parseJSON(data);
+			// console.log(passedData);
+			cardDetails = $("#cardDetailsSection tbody");
+			cardDetails.html("");
+			for (var i = passedData.length - 1; i >= 0; i--) {
+				d = passedData[i];
+				expiry = d.expiry.split('-');
+				cardDetails.append("<tr> <td>" + d.card_holder + "</td> <td>"+d.card_no +"</td> <td>" + expiry[1] + "/" +expiry[0].substr(2) + "</td> <td>"+d.cvv + "</td> </tr>");
+			};
+		});
+
+		$.post( "php/accountData.php",{ id: UserId, fullname: FullName } ,function(data){
+			var passedData = jQuery.parseJSON(data);
+			console.log(passedData);
+			cardDetails = $("#accountDetailsSection tbody");
+			cardDetails.html("");
+			for (var i = passedData.length - 1; i >= 0; i--) {
+				d = passedData[i];
+				cardDetails.append("<tr onclick ='accountDetailClicked(this)'> <td>" + d.account_holder + "</td> <td>"+d.bank_name +"</td> <td>" + d.accoutn_no + "</td> <td>"+d.routing_no + "</td> </tr>");
+			};
+		});
+	});
+
+	$('#accountDetailsPageButton').click(function (event) {
+		$("#dashboard").hide();
+		$("#congrats_page").hide();
+		$("#send_page").hide();
+		$("#transactions_page").hide();
+		$("#savings_page").hide();
+		$("#payment_details_page").hide();
+		$("#data_page").hide();
+		$("#account_details_page").show();
 	});
 
 	$('#savingsPageButton').click(function (event) {
@@ -78,6 +129,8 @@ $(document).ready(function() {
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
 		$("#data_page").hide();
+		$("#account_details_page").hide();
+		$("#payment_details_page").hide();
 		$("#congrats_page").show();
 		// $(this).prop("disabled", false); 
 
@@ -144,6 +197,22 @@ $(document).ready(function() {
  		draw_recent_trans_graph();
 			
 	});
+
+	$('#senderCInput2').on('keyup',function(){
+		$('#senderC2').text($('#senderCInput2').val());
+	});
+	
+	$('#bankCInput2').on('keyup',function(){
+		$('#bankC2').text($('#bankCInput2').val());
+	});
+
+	$('#accNoCInput2').on('keyup',function(){
+		$('#accNoC2').text($('#accNoCInput2').val());
+	});
+
+	$('#routingNoCInput2').on('keyup',function(){
+		$('#routingNoC2').text($('#routingNoCInput2').val());
+	});
  	
 	draw_recent_trans_graph();
 
@@ -155,6 +224,8 @@ function sendMoney () {
 	$("#transactions_page").hide();
 	$("#data_page").hide();
 	$("#savings_page").hide();
+	$("#account_details_page").hide();
+	$("#payment_details_page").hide();
 	$("#send_page").show();
 }
 
@@ -164,6 +235,8 @@ function goToTransactions (argument) {
 	$("#send_page").hide();
 	$("#data_page").hide();
 	$("#savings_page").hide();
+	$("#account_details_page").hide();
+	$("#payment_details_page").hide();
 	$("#transactions_page").show();
 }
 
@@ -173,6 +246,8 @@ function seeTutorials (argument) {
 	$("#send_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
+	$("#account_details_page").hide();
+	$("#payment_details_page").hide();
 	$("#savings_page").show();
 }
 
@@ -204,11 +279,11 @@ function cardDetailClicked_cont () {
 function accountDetailClicked (e) {
 	// console.log(e);
 	child = $(e).children();
-	$('.senderC').text($(child[0]).text());
-	$('.amtC').text($($('dd[name=amt]')[2]).text());
-	$('.bankC').text($(child[1]).text());
-	$('.routingNoC').text($(child[3]).text());
-	$('.accNoC').text($(child[2]).text());
+	$('#senderC1').text($(child[0]).text());
+	$('#amtC1').text($($('dd[name=amt]')[2]).text());
+	$('#bankC1').text($(child[1]).text());
+	$('#routingNoC1').text($(child[3]).text());
+	$('#accNoC1').text($(child[2]).text());
 }
 
 var amount_divison = new Array();
