@@ -38,7 +38,8 @@
 
 body {
   padding-top: 90px;
-  font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
+  /*font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif;*/
   color: #333;
   font-size: 14px;
   line-height: 20px;
@@ -123,12 +124,12 @@ p {
 
     /* Mozilla based browsers */
 ::-moz-selection {
-       background-color: #22a966;
+       background-color: #024264;
        color: #fff;
 }
     /* Works in Safari */
 ::selection {
-       background-color: #22a966;
+       background-color: #024264;
        color: #fff;
 }
 
@@ -139,14 +140,14 @@ p {
   border: 2px solid #373c40;
   border-radius: 5px;
   color: #373c40;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
 }
 .button:hover {
-  border-color: #22a966;
-  background-color: #22a966;
+  border-color: #024264;
+  background-color: #024264;
   color: white;
 }
 .button.black:hover {
@@ -188,14 +189,14 @@ p {
   color: white;
 }
 .button.location:hover {
-  border-color: #22a966;
+  border-color: #024264;
 }
 .button.slider {
   border-color: white;
   color: white;
 }
 .button.slider:hover {
-  border-color: #22a966;
+  border-color: #024264;
   opacity: 1;
 }
 
@@ -257,10 +258,10 @@ p {
   margin-top: 19px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #22a966;
+  background-color: #024264;
 }
 .team-line.orange {
-  background-color: #22a966;
+  background-color: #024264;
 }
 .social-icon {
   position: relative;
@@ -295,15 +296,15 @@ p {
 }
 .icon {
   display: block !important;
-  width: 100px;
-  height: 100px;
-  line-height: 98px !important;
+  width: 125px;
+  height: 125px;
+  line-height: 125px !important;
   margin-right: auto;
   margin-left: auto;
   border-radius: 100px;
   background-color: #f6f6f6;
   color: #444;
-  font-size: 50px;
+  font-size: 70px !important; 
   text-align: center;
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
@@ -372,7 +373,7 @@ p {
 .color-line .w-col {
   height: 6px;  
 }
-.color-one { background-color: #22a966; }
+.color-one { background-color: #024264; }
 .color-two { background-color: #eb5836; }
 .color-three { background-color: #f2c230; }
 .color-five { background-color: #1ebdd5; }
@@ -406,7 +407,7 @@ p {
   padding-right: 30px;
   padding-left: 30px;
   color: #777;
-  font-size: 19px;
+  font-size: 24px;
   line-height: 30px;
   font-style: italic;
   font-weight: 300;
@@ -552,7 +553,7 @@ p {
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   color: #373c40;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -561,7 +562,7 @@ p {
   color: white;
 }
 .nav-link.w--current {
-  background-color: #22a966;
+  background-color: #024264;
   color: white;
   font-weight: 700;
 }
@@ -988,7 +989,7 @@ p {
   z-index: 3;
   padding-top: 60px;
   padding-bottom: 40px;
-  background-color: #22a966;
+  background-color: #024264;
 }
 .hero-column {
   padding-right: 0px;
@@ -1178,7 +1179,7 @@ p {
 .submit-button {
   width: 100%;
   border-radius: 5px;
-  background-color: #22a966;
+  background-color: #024264;
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -1367,7 +1368,7 @@ p {
 .line-about {
   width: 20px;
   height: 2px;
-  background-color: #22a966;
+  background-color: #024264;
 }
 .subtext-portfolio {
   padding-top: 20px;
@@ -1868,7 +1869,7 @@ html.w-mod-js.w-mod-no-ios *[data-ix="scroll-line-from-left-2"] {
     color: #373c40;
   }
   .menu-button.w--open {
-    background-color: #22a966;
+    background-color: #024264;
   }
   .button-single {
     float: right;
