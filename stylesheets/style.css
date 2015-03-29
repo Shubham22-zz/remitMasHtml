@@ -38,7 +38,8 @@
 
 body {
   padding-top: 90px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato Thin', sans-serif;
+  font-weight: 100 !important;
   /*font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif;*/
   color: #333;
   font-size: 14px;
@@ -410,7 +411,7 @@ p {
   font-size: 24px;
   line-height: 30px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 100;
   text-align: center;
   text-transform: none;
 }
@@ -554,7 +555,7 @@ p {
   transition: all 500ms ease;
   color: #373c40;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
 }
 .nav-link:hover {
@@ -564,7 +565,7 @@ p {
 .nav-link.w--current {
   background-color: #024264;
   color: white;
-  font-weight: 700;
+  font-weight: 100;
 }
 
 /* 9. Testimonials */
