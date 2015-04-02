@@ -39,7 +39,7 @@
 body {
   padding-top: 90px;
   font-family: 'Lato Thin', sans-serif;
-  font-weight: 100 !important;
+  font-weight: 100;
   /*font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif;*/
   color: #333;
   font-size: 14px;
@@ -408,9 +408,9 @@ p {
   padding-right: 30px;
   padding-left: 30px;
   color: #777;
-  font-size: 24px;
+  font-size: 19px;
   line-height: 30px;
-  font-style: italic;
+  /*font-style: italic;*/
   font-weight: 100;
   text-align: center;
   text-transform: none;
@@ -805,6 +805,7 @@ p {
 }
 .div-left {
   padding-top: 17px;
+  /*text-align: center;*/
 }
 .ipad {
   display: block;
