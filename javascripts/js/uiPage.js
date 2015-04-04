@@ -121,6 +121,9 @@ $(document).ready(function() {
 		seeTutorials();
 	});
 
+	$('#moreRecepient').click(function (event) {
+		goToTransactions();
+	});
 
 	$('#checkoutwizard .finish').click(function (event) {
 		// $(this).prop("disabled", true); 
