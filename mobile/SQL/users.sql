@@ -1,0 +1,8 @@
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Felipe Pacheco','Felipe','felipe','SVC','felipepacheco@gmail.com',100.0,54);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Daniela Hernandez','Daniela','daniela','COP','danielahernandez@gmail.com',500.0,58);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Maria Puch','Maria','maria','MXN','mariapuch@yahoo.com',200.0,45);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Maelis Carraro','Maelis','maelis','GTQ','maeliscarraro@hotmail.com',555.0,67);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Natalie Gomez','Natalie','natalie','CAD','nataliegomez@remitmas.com',345.0,84);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Jose Hernandez','Jose','jose','PEN','josehernandez@microsoft.com',324.0,35);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Steven Pallickal','Steven','steven','DOP','stevenpallickal@yahoo.com',524.0,45);
+Insert INTO Users(fullname,username,password,countryCode,email,remitmas_money,tut_point) VALUES ('Shubham Mehta','Shubham','shubham','USD','shubhammehta@yahoo.com',788.0,89);	

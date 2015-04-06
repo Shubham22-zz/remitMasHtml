@@ -1,0 +1,12 @@
+Insert INTO Friendship(user_id,friend_id) VALUES ('2','1');
+Insert INTO Friendship(user_id,friend_id) VALUES ('2','3');
+Insert INTO Friendship(user_id,friend_id) VALUES ('4','2');
+Insert INTO Friendship(user_id,friend_id) VALUES ('4','7');
+Insert INTO Friendship(user_id,friend_id) VALUES ('8','7');
+Insert INTO Friendship(user_id,friend_id) VALUES ('1','3');
+Insert INTO Friendship(user_id,friend_id) VALUES ('3','4');
+Insert INTO Friendship(user_id,friend_id) VALUES ('2','5');
+Insert INTO Friendship(user_id,friend_id) VALUES ('4','5');
+Insert INTO Friendship(user_id,friend_id) VALUES ('6','5');
+Insert INTO Friendship(user_id,friend_id) VALUES ('2','7');
+Insert INTO Friendship(user_id,friend_id) VALUES ('4','6');

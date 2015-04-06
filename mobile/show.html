@@ -1,0 +1,2874 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<title>RemitMas</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="description" content="RemitMas Dashboard">
+	<meta name="author" content="RemitMas">
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,700' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="stylesheets/vidstyle.css" type="text/css" media="screen" /> -->
+	<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	 <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+	
+	<link href="stylesheets/uiPage.css" type="text/css" rel="stylesheet">
+	<link href="stylesheets/styles.css" type="text/css" rel="stylesheet">
+	
+	<link href="javascripts/plugins/jstree/dist/themes/avalon/style.min.css" type="text/css" rel="stylesheet">
+	<link href="javascripts/plugins/codeprettifier/prettify.css" type="text/css" rel="stylesheet">
+	<link href="javascripts/plugins/iCheck/skins/minimal/blue.css" type="text/css" rel="stylesheet">
+	<link href="javascripts/plugins/Ion.RangeSlider/css/ion.rangeSlider.css" type="text/css" rel="stylesheet">                    <!-- Ion Range Slider -->
+	<link href="javascripts/plugins/Ion.RangeSlider/css/ion.rangeSlider.skinNice.css" type="text/css" rel="stylesheet">           <!-- Ion Range Slider Default Skin -->
+	<link href="javascripts/plugins/form-daterangepicker/daterangepicker-bs3.css" type="text/css" rel="stylesheet">    	<!-- DateRangePicker -->
+	<link href="javascripts/plugins/switchery/switchery.css" type="text/css" rel="stylesheet">        					<!-- Switchery -->
+	<!-- <link href="javascripts/plugins/fullcalendar/fullcalendar.css" type="text/css" rel="stylesheet">  -->
+	<link href="javascripts/plugins/card/lib/css/card.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/overlay-minimal.css" type="text/css" media="screen" />
+</head>
+<body class="infobar-offcanvas">
+<?php  
+	include("php/show.php");
+?>
+<header id="topnav" class="navbar navbar-inverse navbar-fixed-top clearfix" role="banner">
+	<a id="leftmenu-trigger" class="" data-toggle="tooltip" data-placement="right" title="Toggle Sidebar"></a>
+	<a class="navbar-brand" href="index.html">RemitMas</a>
+	<a id="rightmenu-trigger" class="" data-toggle="tooltip" data-placement="left" title="Toggle Infobar"></a>
+	
+
+	
+
+	<ul class="nav navbar-nav toolbar pull-right">
+		<li class="dropdown">
+			<a href="#" id="navbar-links-toggle" data-toggle="collapse" data-target="header>.navbar-collapse">&nbsp;</a>
+		</li>
+
+		<!-- <li class="toolbar-icon-bg demo-headerdrop-hidden">
+            <a href="#" id="headerbardropdown"><span class="icon-bg"><i class="fa fa-fw fa-level-down"></i></span></i></a>
+        </li>
+ -->
+
+		
+
+		
+		<li class="dropdown toolbar-icon-bg">
+			<a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><span class="icon-bg"><i class="fa fa-fw fa-bell"></i></span><span class="badge badge-alizarin">5</span></a>
+			<div class="dropdown-menu notifications arrow">
+				<div class="dd-header">
+					<span>Notifications</span>
+					<span><a href="#">Settings</a></span>
+				</div>
+				<ul class="scrollthis">
+					<li class="">
+						<a href="#" class="notification-success">
+							<div class="notification-icon"><i class="fa fa-check fa-fw"></i></div>
+							<div class="notification-content"><strong>Notifications</strong> Notifications will be given to you here</div>
+							<div class="notification-time">40m</div>
+						</a>
+					</li>
+					<li class="">
+						<a href="#" class="notification-danger">
+							<div class="notification-icon"><i class="fa fa-times fa-fw"></i></div>
+							<div class="notification-content">Notifications will be given to you here</div>
+							<div class="notification-time">5h</div>
+						</a>
+					</li>
+					<li class="">
+						<a href="#" class="notification-inverse">
+							<div class="notification-icon"><i class="fa fa-cloud fa-fw"></i></div>
+							<div class="notification-content"><strong>Notifications</strong> will be given to you here.</div>
+							<div class="notification-time">16h</div>
+						</a>
+					</li>
+					<li class="">
+						<a href="#" class="notification-warning">
+							<div class="notification-icon"><i class="fa fa-warning fa-fw"></i></div>
+							<div class="notification-content">Notifications will be given to you here.</div>
+							<div class="notification-time">1d</div>
+						</a>
+					</li>
+					<li class="">
+						<a href="#" class="notification-info">
+							<div class="notification-icon"><i class="fa fa-shopping-cart fa-fw"></i></div>
+							<div class="notification-content">Notifications will be given to you here.</div>
+							<div class="notification-time">5d</div>
+						</a>
+					</li>
+					<li class="">
+						<a href="#" class="notification-primary">
+							<div class="notification-icon"><i class="fa fa-comment fa-fw"></i></div>
+							<div class="notification-content">Notifications will be given to you here.</div>
+							<div class="notification-time">8d</div>
+						</a>
+					</li>
+				</ul>
+				<div class="dd-footer">
+					<a href="#">View all notifications</a>
+				</div>
+			</div>
+		</li>
+
+		<li class="dropdown toolbar-icon-bg hidden-xs">
+			<a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><span class="icon-bg"><i class="fa fa-fw fa-envelope"></i></span><span class="badge badge-info">1</span></a>
+			<div class="dropdown-menu messages arrow">
+				<div class="dd-header">
+					<span>Messages</span>
+					<span><a href="#">Settings</a></span>
+				</div>
+
+				<ul class="scrollthis">
+					<li class="">
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_09.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">Steven Shipe</span>
+								<span class="msg">Messages will be shown here</span>
+							</div>
+							<span class="msg-time">30s</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_01.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">Roxann Hollingworth <i class="fa fa-paperclip attachment"></i></span>
+								<span class="msg">Messages will be shown here</span>
+							</div>
+							<span class="msg-time">5m</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_05.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">Diamond Harlands</span>
+								<span class="msg">:)</span>
+							</div>
+							<span class="msg-time">3h</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_02.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">Michael Serio <i class="fa fa-paperclip attachment"></i></span>
+								<span class="msg">Messages will be shown here</span>
+							</div>
+							<span class="msg-time">12h</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_03.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">Matt Jones</span>
+								<span class="msg">Messages will be shown here</span>
+							</div>
+							<span class="msg-time">2d</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="msg-avatar" src="images/avatar_07.png" alt="avatar" />
+							<div class="msg-content">
+								<span class="name">John Doe</span>
+								<span class="msg">Messages will be shown here</span>
+							</div>
+							<span class="msg-time">7d</span>
+						</a>
+					</li>					
+				</ul>
+				<div class="dd-footer"><a href="#">View all messages</a></div>
+			</div>
+		</li>
+
+		<!-- <li class="dropdown toolbar-icon-bg demo-search-hidden mr5">
+			<a href="#" class="dropdown-toggle tooltips" data-toggle="dropdown"><span class="icon-bg"><i class="fa fa-fw fa-search"></i></span></a>
+			
+			<div class="dropdown-menu arrow search dropdown-menu-form">
+				<div class="dd-header">
+					<span>Search</span>
+					<span><a href="#">Advanced search</a></span>
+				</div>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="">
+					
+					<span class="input-group-btn">
+						
+						<a class="btn btn-primary" href="#">Search</a>
+					</span>
+				</div>
+			</div>
+		</li> -->
+
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+				<span class="hidden-xs"><?php echo $Username; ?></span>
+				<img class="img-circle" src="images/avatar_06.png" alt="Dangerfield" />
+
+			</a>
+			<ul class="dropdown-menu userinfo">
+				<li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>
+				<li><a href="#"><span class="pull-left">Account Settings</span> <i class="pull-right fa fa-cogs"></i></a></li>
+				<li><a href="#"><span class="pull-left">Help</span> <i class="pull-right fa fa-question-circle"></i></a></li>
+				<li class="divider"></li>
+				<li><a href="#"><span class="pull-left">Send</span> <i class="pull-right fa fa-money"></i></a></li>
+				<li><a href="#"><span class="pull-left">Transactions</span> <i class="pull-right fa fa-file-o"></i></a></li>
+				<li><a href="#"><span class="pull-left">Savings Toolkit</span> <i class="pull-right fa fa-credit-card"></i></a></li>
+				<li class="divider"></li>
+				<li><a href="#"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a></li>
+			</ul>
+		</li>
+
+	</ul>
+</header>
+<div id="wrapper">
+	<div id="layout-static">
+		<div class="static-sidebar-wrapper sidebar-default">
+			<div class="static-sidebar">
+				<div class="sidebar">
+					<div class="widget stay-on-collapse">
+						<div class="widget-body welcome-box tabular">
+							<div class="tabular-row">
+								<div class="tabular-cell welcome-avatar">
+									<a href="#"><img src="images/avatar_06.png" class="avatar"></a>
+								</div>
+								<div class="tabular-cell welcome-options">
+									<span class="welcome-text">Welcome,</span>
+									<a href="#" class="name"><?php echo $Username; ?></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget stay-on-collapse" id="widget-sidebar">
+						<span class="widget-heading">Explore</span>
+						<nav role="navigation" class="widget-body">
+							<ul class="acc-menu">
+								<li id="dashboardButton"><a><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+								<li id="sendPageButton"><a href="javascript:;"><i class="fa fa-columns"></i><span>Send</span></a>
+									<!-- <ul id="recepients_tab" class="acc-menu">
+
+										<li><a >Recipients</a></li>
+									</ul> -->
+								</li>
+								<li id="transactionsPageButton"><a href="javascript:;"><i class="fa fa-flask"></i>Transactions</a>
+									<!-- <ul class="acc-menu">
+										<li><a href="placeholder.html">Actual</a></li>
+										<li><a href="placeholder.html">Spent</a></li>
+										<li><a href="placeholder.html">Budget</a></li>
+									</ul> -->
+								</li>
+								<li id="savingsPageButton" ><a href="javascript:;"><i class="fa fa-cogs"></i><span>Savings Toolkit</span></a>
+									<!-- <ul class="acc-menu">
+										<li><a href="placeholder.html">Tutorial Progress</a></li>
+									</ul> -->
+								</li>
+								<li id="dataPageButton"><a href="javascript:;"><i class="fa fa-random"></i><span>Data</span></a>
+									<<!-- ul class="acc-menu">
+										<li><a href="placeholder.html">Visual Data</a></li>
+									</ul> -->
+								</li>
+								<li><a href="javascript:;"><i class="fa fa-pencil"></i><span>My Profile</span></a>
+									<ul class="acc-menu">
+										<li id="accountDetailsPageButton"><a hhref="javascript:;">Account Details</a></li>
+										<li id="paymentDetailsPageButton"><a href="javascript:;">Payment Details</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<ul class="acc-menu">
+										<li><a href="placeholder.html">Google Maps</a></li>
+										<li><a href="placeholder.html">Vector Maps</a></li>
+										<li><a href="placeholder.html">Mapael</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="acc-menu">
+										<li><a href="placeholder.html">Placeholder</a></li>
+										<li><a href="placeholder.html">Placeholder</a></li>
+										<li><a href="placeholder.html">Placeholder</a></li>
+										<li><a href="placeholder.html">Placeholder</a></li>
+										<li><a href="javascript:;">Placeholder</a>
+											<ul class="acc-menu">
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+											</ul>
+										</li>
+										<li><a href="placeholder.html">Placeholder</a></li>
+										<li><a href="placeholder.html">Placeholder</a>
+											<ul class="acc-menu">
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+												<li><a href="placeholder.html">Placeholder</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="acc-menu">
+										<li><a href="javascript:;">Menu Item 1</a></li>
+										<li><a href="javascript:;">Menu Item 2</a>
+											<ul class="acc-menu">
+												<li><a href="javascript:;">Menu Item 2.1</a></li>
+												<li><a href="javascript:;">Menu Item 2.2</a>
+													<ul class="acc-menu">
+														<li><a href="javascript:;">Menu Item 2.2.1</a></li>
+														<li><a href="javascript:;">Menu Item 2.2.2</a>
+															<ul class="acc-menu">
+																<li><a href="javascript:;">And deeper yet!</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="disabled-link"><a href="index.html">Disabled Menu Item</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- <div class="widget stay-on-collapse">
+						<div class="widget-heading">Placeholder</div>
+						<nav class="widget-body">
+							<ul class="acc-menu">
+								<li><a href="javascript:;"><i class="fa fa-coffee"></i><span>Placeholder 1</span></a>
+									<ul class="acc-menu">
+										<li><a href="placeholder.html">Placeholder</a></li>
+									</ul>
+								</li>
+							</ul>
+					
+						</nav>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="static-content-wrapper">
+			<div class="static-content">
+				<div id="dashboard" class="page-content">
+					<div class="page-heading">            
+						<h1>RemitMas Balance: <font size="6"><b>$<?php echo $Remitmas_money; ?></b></font></h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+
+
+						<div id="panel-advancedoptions">
+							<div class="row">
+								<div class="col-md-3" >
+									<a class="info-tiles tiles-inverse has-footer" href="#" id="sendMoneyTile">
+										<div class="tiles-heading">
+											<div class="pull-left">Money Sent</div>
+											<div class="pull-right">
+												<div id="tileorders" class="sparkline-block"></div>
+											</div>
+										</div>
+										<div class="tiles-body">
+											<div class="text-center">$1500.0</div>
+										</div>
+										<div class="tiles-footer">
+											<div class="pull-left">send money</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="info-tiles tiles-green has-footer" href="#" id="transactionTile">
+										<div class="tiles-heading">
+											<div class="pull-left">Transactions</div>
+											<div class="pull-right">
+												<div id="tilerevenues" class="sparkline-block"></div>
+											</div>
+										</div>
+										<div class="tiles-body">
+											<div class="text-center">6</div>
+										</div>
+										<div class="tiles-footer">
+											<div class="pull-left">go to transactions</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="info-tiles tiles-blue has-footer" href="#" id="tutorialTile">
+										<div class="tiles-heading">
+											<div class="pull-left">RemitMas Points</div>
+											<div class="pull-right">
+												<div id="tiletickets" class="sparkline-block"></div>
+											</div>
+										</div>
+										<div class="tiles-body">
+											<div class="text-center percent-change"><?php echo $Remitmas_Points; ?></div>
+										</div>
+										<div class="tiles-footer">
+											<div class="pull-left">see tutorials</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="col-md-3">
+									<a class="info-tiles tiles-midnightblue has-footer" href="#">
+										<div class="tiles-heading">
+											<div class="pull-left">Friends</div>
+											<div class="pull-right">
+												<div id="tilemembers" class="sparkline-block"></div>
+											</div>
+										</div>
+										<div class="tiles-body">
+											<div class="text-center"><?php echo $Friends_no; ?></div>
+										</div>
+										<div class="tiles-footer">
+											<div class="pull-left">manage friends</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+								<div class="panel-heading" role="heading">
+									<h2 style="font-size: 22px">Send Money</h2></div>
+									<div class="panel-body" role="content">
+
+										<form action="" class="form-horizontal row-border">
+											<div class="form-group">
+												<div class="col-md-4">
+													<div class="text-center">
+														<h2>Choose Country</h2>
+													</div>
+													<div class="panel-body">
+														<div class="col-md-13">
+															<select class="form-control" id="dashCountryName">
+																<?php echo $CountryList; ?>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<div class="text-center">
+														<h2>Recipients</h2>
+													</div>
+													<div class="panel-body">
+														<div class="col-md-16">
+															<div class="col-md-2">
+															</div>
+															<div class="col-md-2">
+																<div class="tabular-cell welcome-avatar">
+																	<a href="#"><img src="images/avatar_01.png" class="avatar"></a>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<div class="tabular-cell welcome-avatar">
+																	<a href="#"><img src="images/avatar_03.png" class="avatar"></a>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<div class="tabular-cell welcome-avatar">
+																	<a href="#"><img src="images/avatar_05.png" class="avatar"></a>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<div class="tabular-cell welcome-avatar">
+																	<a href="#"><img src="images/avatar_11.png" class="avatar"></a>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<span class="btn btn-midnightblue-alt">
+																	<span class="fileinput-new">More...</span>
+																</span>
+															</div>
+														</div>	
+													</div>
+												</div>
+
+
+											</div>
+
+										</form>
+
+									</div>
+								</div>
+
+<!-- Row for e-wallets -->
+								<div class="row">
+									<div class="col-md-12 bs-grid">
+										<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+											<div class="panel-heading" role="heading">
+												<h2 style="font-size: 22px">My E-wallets</h2>
+											</div>
+											<div class="panel-body" role="content">
+
+												<div class="col-md-3 bs-grid">
+													<!-- <div class="panel panel-toyo" data-widget-editbutton="false" id="p1" role="widget"> -->
+														<!-- <div class="panel-heading" role="heading"> <h2>EDUCATION</h2></div> -->
+
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#eduDashModal" class="col-md-12">
+																<div class="walletIcon fa fa-university fa-3x" style="color: #F68121;"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>EDUCATION: $500</h3>
+															</div>
+															<!-- Education Modal -->
+														<div class="modal fade" id="eduDashModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Education Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Education Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Education Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+														</div>
+													<!-- </div> -->
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													<!-- <div class="panel panel-toyo" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-heading" role="heading"> <h2>HEALTHCARE</h2></div> -->
+
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#healthDashModal" class="col-md-12">
+																<div class="walletIcon fa fa-medkit fa-3x" style="color:#E74C3C;"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HEALTHCARE: $300</h3>
+															</div>
+															<!-- Healthcare Modal -->
+														<div class="modal fade" id="healthDashModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Healthcare Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Healthcare Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Healthcare Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+														</div>
+													<!-- </div> -->
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													<!-- <div class="panel panel-toyo" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-heading" role="heading"> <h2>HOUSING</h2></div> -->
+
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#housingDashModal" class="col-md-12">
+																<div class="walletIcon fa fa-home fa-3x" style="color:#024264"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HOUSING: $300</h3>
+															</div>
+															<!-- Housing Modal -->
+														<div class="modal fade" id="housingDashModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Housing Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Housing Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Housing Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+														</div>
+
+													<!-- </div> -->
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													<!-- <div class="panel panel-toyo" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-heading" role="heading"> <h2>CASH</h2></div> -->
+
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#cashDashModal" class="col-md-12">
+																<div class="walletIcon fa fa-money fa-3x" style="color:#1F5D33"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>CASH: $300</h3>
+															</div>
+
+															<!-- Cash Modal -->
+														<div class="modal fade" id="cashDashModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Cash Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Cash Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Cash Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+														</div>
+													<!-- </div> -->
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12 bs-grid">
+										<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+											<div class="panel-heading" role="heading">
+												<h2 style="font-size: 22px">My Transactions</h2>
+											</div>
+											<div class="panel-body" role="content">
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="recentTrans" style="width: 100%; height: 300px;" class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Recent Transaction</h2>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="lastMonth" style="width: 100%; height: 300px; " class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Previous Month</h2>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="overall" style="width: 100%; height: 300px; " class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Overall Transactions</h2>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div> 
+				</div>
+				<div id="send_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Send Money</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel panel-toyo">
+										<!-- <div class="panel-heading"></div> -->
+											<!--#TODO Progressbar <div class="progress">
+											<div class="progress-bar progress-bar-success" style="width: 33%"></div>
+											</div> -->
+										<div class="panel-heading"></div>
+
+										<div class="panel-body">
+											<div class="col-xs-12">
+												<form id="checkoutwizard" >
+													<fieldset title="Step 1">
+														<legend>Transfer Information</legend>
+															<div class="row">
+																<div class="col-md-8">
+																	<div class="row">
+																		<div class="col-md-12">
+																			<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																				<div class="panel-heading" role="heading">
+																					<h2>Where do you want to send?</h2>
+																				</div>
+																				<div class="panel-body" role="content">
+																					<div class="col-md-12">
+																						<div class="panel-body">
+																							<h5>Country</h5>
+																							<select class="form-control" id="sendCountryName">
+																									<option data-cur='' value=''></option>
+																									<?php echo $CountryList; ?>
+																								<!-- </optgroup> -->
+																							</select>
+																							<br/>
+																							<h5> Conversion Rate </h5>
+																							<h4 id="convRate">1 USD = ?</h4> 
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-md-12">
+																			<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																				<div class="panel-heading" role="heading">
+																					<h2>How much do you want to send?</h2>
+																				</div>
+																				<div class="panel-body" role="content">
+																					<div class="col-md-12">
+																						<div class="panel-body">
+																							<div class="col-sm-9">
+																								<h4>USD</h4>
+																								<input id="sendAmt" type="text" class="form-control" placeholder="100.00">
+																							</div>
+																							<div class="col-sm-7 text-center">
+																							<h4><b>=</b></h4>
+																							</div>
+																							<div class="col-sm-9">
+																								<h4 id="currency">Currency Code</h4>
+																								<input type="text" class="form-control" placeholder="select the country first">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>		
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																		<div class="panel-heading">
+																			<h2>Transfer Summary</h2>
+																		</div>
+																		<div class="panel-body" role="content">
+																		<dl class="dl-horizontal">
+																			<dt><h3>Country</h3></dt><dd name="country_name"></dd>
+																			<dt><h3>Amount</h3></dt><dd name="amt"></dd>
+																			<dt>Education</dt><dd name="edu"></dd>
+																			<dt>Healthcare</dt><dd name="health"></dd>
+																			<dt>Housing</dt><dd name="housing"></dd>
+																			<dt>Cash</dt><dd name="cash"></dd>
+																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+													</fieldset>
+													<fieldset title="Step 2">
+														<legend>Recepient Information & Amount divison</legend>
+															<div class="row">
+																<div class="col-md-8">
+																	<div class="panel panel-default panel-btn-focused demo-new-members" id="p3">
+																		<div class="panel-heading">
+																			<h2>Select Recepient</h2>
+																		</div>
+																		<div class="panel-editbox" style="display: none">
+																			<div class="form-horizontal">
+																				<div class="form-group">
+																					<div class="col-sm-12">
+																						<input type="text" class="form-control">
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		
+																		<div class="panel-body panel-no-padding">
+																			<div class="tabel-responsive">
+																				<table class="table table-hover mb0">
+																					<thead>
+																						<tr>
+																							<th width="5" class="vam"><div class=""></div></th>
+																							<th width="25">Name</th>
+																							<th width="35" class="hidden-xs">Email</th>
+																							
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
+																							<td>Maria Puch</td>
+																							<td class="hidden-xs">mariapuch@gmail.com</td>
+
+																							
+																						</tr>
+																						<tr>
+																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
+																							<td>Felipe Pacheco</td>
+																							<td class="hidden-xs">felipepacheco@yahoo.com</td>
+																							
+																						</tr>
+																						<tr>
+																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
+																							<td>Anderson Corrigan</td>
+																							<td class="hidden-xs">andy91@hotmail.com</td>
+																							
+																						</tr>
+																						<tr>
+																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
+																							<td>Natalie Gomez</td>
+																							<td class="hidden-xs">nataliegomez91@microsoft.com</td>
+																							
+																						</tr>
+																						<tr>
+																							<td class="vam"><div class="checkbox icheck"><input type="checkbox" value=""></div></td>
+																							<td>Dirk Fino</td>
+																							<td class="hidden-xs">dif03@gmail.com</td>
+																							
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																			<div class="panel-footer p10 m0">
+																				<ul class="pagination pagination-sm m0 pull-right">
+																					<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+																					<li class="active"><a href="#">1</a></li>
+																					<!-- <li><a href="#">2</a></li>
+																					<li><a href="#">3</a></li> -->
+																					<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+																				</ul>
+																				<!-- <a href="#" class="btn btn-sm btn-default pull-left">Approve Selected</a> -->
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																		<div class="panel-heading">
+																			<h2>Transfer Summary</h2>
+																		</div>
+																		<div class="panel-body" role="content">
+																		<dl class="dl-horizontal">
+																			<dt><h3>Country</h3></dt><dd name="country_name"></dd>
+																			<dt><h3>Amount</h3></dt><dd name="amt"></dd>
+																			<dt>Education</dt><dd name="edu"></dd>
+																			<dt>Healthcare</dt><dd name="health"></dd>
+																			<dt>Housing</dt><dd name="housing"></dd>
+																			<dt>Cash</dt><dd name="cash"></dd>
+																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
+																		</div>
+																	</div>
+																</div>
+																																
+															</div>
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																		<div class="panel-heading">
+																			<h2>How much do you plan to save?</h2>
+																		</div>
+																		<div class="panel-body" role="content">
+																			<div class="row">
+																				<div class="col-md-8">
+																					<div class="row">
+																						<div class="col-md-2">Education</div>	
+																						<div class="col-md-10">
+																							<div id="money-edu"></div>
+																						</div>
+																					</div>
+																					<p></p>
+																					<div class="row">
+																						<div class="col-xs-2">Healthcare</div>	
+																						<div class="col-xs-10">
+																							<div id="money-health"></div>
+																						</div>
+																					</div>
+																					<p></p>
+																					<div class="row">
+																						<div class="col-xs-2">Housing</div>	
+																						<div class="col-xs-10">
+																							<div id="money-housing"></div>
+																						</div>
+																					</div>
+																					<p></p>
+																					<div class="row">
+																						<div class="col-xs-2">Cash</div>	
+																						<div class="col-xs-10">
+																							<div id="money-cash"></div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="col-md-4">
+																					<div class="col-md-12">
+																						<div class="panel-body">
+																							<div id="selectedTrans" style="width: 100%; height: 300px; " class="centered">
+																								
+																							</div>
+																							
+																						</div>
+
+																					</div>
+																				</div>	
+																			</div>
+																			<!-- <div class="panel-footer">
+																				<div class="row">
+																					<div class="col-md-4 col-sm-offset-4">
+																						<a href="#" class="btn btn-primary btn-block">Send</a>
+																					</div>
+																				</div> 
+																			</div> -->
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+													</fieldset>
+													<fieldset title="Step 3">
+														<legend>Payment Method</legend>
+															<div class="row">
+																<div class="col-sm-8">
+																	<div class="row">
+																		<div class="col-sm-12">
+																			<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																				<div class="panel-heading" role="heading">
+																					<h2>How do you want to pay?</h2>
+																				</div>
+																				<div class="panel-body" role="content">
+																					<div class="form-group">
+																						<label class="col-sm-3 control-label">Payment Method</label>
+																						<div class="col-sm-7">
+																							<select class="form-control" id="cardType">
+																								<option>Debit Card</option>
+																								<option>Account</option>
+																							</select>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div> 
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-12">
+																			<div class="panel panel-default" data-widget-editbutton="false" id="debit_mode" role="widget">
+																				<div class="panel-heading" role="heading">
+																					<h2>Payment details</h2>
+																				</div>
+																				<div class="panel-body" role="content">
+																					<div class="row">
+																						<div class="card-wrapper" id="card-wrapper1"></div>
+																					</div>
+																					<div class="row">
+																					<p></p>
+																					<p></p>
+																					<p></p>
+																					</div>
+																					<div class="row">
+																						<div class="col-sm-1">
+																						</div>
+																						<div class="col-sm-10">
+																							<div style="display: none" class="form-horizontal card" id="card1">
+																								<div class="form-group">
+																									<label for="#" class="col-sm-4 control-label">Card Number</label>	
+																									<div class="col-sm-8">
+																										<input placeholder="Card number" type="text" name="number" class="form-control">
+																									</div>
+																								</div>
+																								<div class="form-group">
+																									<label for="#" class="col-sm-4 control-label">Full Name</label>	
+																									<div class="col-sm-8">
+																										<input placeholder="Full name" type="text" name="name" class="form-control">
+																									</div>
+																								</div>
+																								<div class="form-group">
+																									<label for="#" class="col-sm-4 control-label">Expiry</label>	
+																									<div class="col-sm-8">
+																										<input placeholder="MM/YY" type="text" name="expiry" class="form-control">
+																									</div>
+																								</div>
+																								<div class="form-group">
+																									<label for="#" class="col-sm-4 control-label">CVV</label>	
+																									<div class="col-sm-8">
+																										<input placeholder="CVC" type="text" name="cvc" class="form-control">
+																									</div>
+																								</div>
+																							</div>
+																							<table cellpadding="0" cellspacing="0" border="0" id="cardDetailsTable" class="table table-striped">
+																							<thead>
+																								<tr>
+																									<th>Card Holder</th>
+																									<th>Card Number</th>
+																									<th>Expiry</th>
+																									<th>CVV</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																							</tbody>
+																							</table>
+																							
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="panel panel-default" data-widget-editbutton="false" id="account_mode" role="widget">
+																				<div class="panel-heading" role="heading">
+																					<h2>Payment details</h2>
+																				</div>
+																				<div class="panel-body" role="content">
+																					<div class="row">
+																						<tr>
+																							<div class="checkImg">
+																							  <img alt="" src="images/blank_check.jpg" />
+																							  <div class="text senderC" id="senderC1" >
+																							   	
+																							  </div>
+																							  <div class="text accNoC" id="accNoC1" >
+																							   	
+																							  </div>
+																							  <div class="text routingNoC" id="routingNoC1" >
+																							   	
+																							  </div>
+																							  <div class="text amtC" id="amtC1" >
+																							   	
+																							  </div>
+																							  <div class="text recepientC" id="recepientC1">
+																							   	
+																							  </div>
+																							  <div class="text bankC" id="bankC1">
+																							   	
+																							  </div>
+																							</div>
+																						</tr>
+																					</div>
+																					<div class="row">
+																					<p></p>
+																					<p></p>
+																					<p></p>
+																					</div>
+																					<div class="row">
+																						<div class="col-sm-1">
+																						</div>
+																						<div class="col-sm-10">
+																							<table cellpadding="0" cellspacing="0" border="0" id="accountDetailsTable" class="table table-striped">
+																								<thead>
+																									<tr>
+																										<th>Account Holder</th>
+																										<th>Bank Name</th>
+																										<th>Account No.</th>
+																										<th>Routing No.</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																								</tbody>
+																							</table>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+																		<div class="panel-heading">
+																			<h2>Transfer Summary</h2>
+																		</div>
+																		<div class="panel-body" role="content">
+																		<dl class="dl-horizontal">
+																			<dt><h3>Country</h3></dt><dd name="country_name"></dd>
+																			<dt><h3>Amount</h3></dt><dd name="amt"></dd>
+																			<dt>Education</dt><dd name="edu"></dd>
+																			<dt>Healthcare</dt><dd name="health"></dd>
+																			<dt>Housing</dt><dd name="housing"></dd>
+																			<dt>Cash</dt><dd name="cash"></dd>
+																			<dt><h3>Recepient Name</h3></dt><dd name="friend"></dd>
+																			<!-- <dt><h3>Recepient Email</h3></dt><dd name="email"></dd> -->
+																			<dt><h3>Payment Method</h3></dt><dd name="paymentMethod"></dd>
+																		</div>
+																	</div>
+																</div>
+															</div>
+													</fieldset>
+													
+													<input type="submit" class="finish btn-success btn" value="Send Money" />
+												</form>
+											</div>
+												
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+							
+					</div>
+				</div>
+				
+
+				<div id="transactions_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Transactions</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+<!-- Wallet on transactions page -->
+							<div class="row">
+									<div class="col-md-12 bs-grid">
+										<!-- <div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget"> -->
+											<!-- <div class="panel-heading" role="heading">
+												<h2>My E-wallets</h2>
+											</div> -->
+											<div class="panel-body" role="content">
+
+												<div class="col-md-3 bs-grid">
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+													
+
+														<div class="panel-body" role="content">
+															
+															<div data-toggle="modal" href="#eduModal" class="col-md-12">
+																<div class="walletIcon fa fa-university fa-3x" style="color: #F68121;"></div>
+																	
+															</div>
+															<div class="text-center">
+																<h3>EDUCATION: $500</h3>
+															</div>
+														</div>
+														<!-- Education Modal -->
+														<div class="modal fade" id="eduModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Education Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Education Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Education Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+											
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div  data-toggle="modal" href="#healthModal" class="col-md-12">
+																<div class="walletIcon fa fa-medkit fa-3x" style="color:#E74C3C;"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HEALTHCARE: $300</h3>
+															</div>
+														</div>
+														<!-- Healthcare Modal -->
+														<div class="modal fade" id="healthModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Healthcare Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Healthcare Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Healthcare Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#housingModal" class="col-md-12">
+																<div class="walletIcon fa fa-home fa-3x" style="color:#024264"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HOUSING: $300</h3>
+															</div>
+														</div>
+
+														<!-- Housing Modal -->
+														<div class="modal fade" id="housingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Housing Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Housing Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Housing Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#cashModal" class="col-md-12">
+																<div class="walletIcon fa fa-money fa-3x" style="color:#1F5D33"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>CASH: $300</h3>
+															</div>
+														</div>
+														<!-- Cash Modal -->
+														<div class="modal fade" id="cashModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Cash Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Cash Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																								<tr>
+																									<td>19/08/2013</td>
+																									<td>John Smith</td>
+																									<td>Canada</td>
+																									<td>Debit Card</td>
+																									<td align="right">$100</td>
+																								</tr>
+																								<tr>
+																									<td>19/12/2013</td>
+																									<td>Ryan Smith</td>
+																									<td>Japan</td>
+																									<td>Credit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/07/2014</td>
+																									<td>Shaun Smith</td>
+																									<td>Korea</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>19/08/2014</td>
+																									<td>John Smith</td>
+																									<td>Idaho</td>
+																									<td>Account</td>
+																									<td align="right" >$300</td>
+																								</tr>
+																								<tr>
+																									<td>19/01/2015</td>
+																									<td>Felipe Roch</td>
+																									<td>Dominion Republic</td>
+																									<td>Account</td>
+																									<td align="right" >$200</td>
+																								</tr>
+																								<tr>
+																									<td>27/01/2015</td>
+																									<td>Michael Parade</td>
+																								<td>Peru</td>
+																									<td>Debit Card</td>
+																									<td align="right" >$300</td>
+																								</tr>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Cash Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+											</div>
+										<!-- </div> -->
+									</div>
+								</div>
+
+
+
+
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel panel-default">
+										<div class="panel-heading"><h2>Transaction List</h2></div>
+										<div class="panel-body panel-no-padding">
+											<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+												<thead>
+													<tr>
+														<th>Transaction #</th>
+														<th>Trasnferred On</th>
+														<th>Friend Name</th>
+														<th>Country</th>
+														<th>Payment Mode</th>
+														<th>Payment Details</th>
+														<th>Amount</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												
+
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>19/08/2013</td>
+														<td>John Smith</td>
+														<td>Canada</td>
+														<td>Debit Card</td>
+														<td>*********9980</td>
+														<td>$300</td>
+														<td>Sent</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>19/12/2013</td>
+														<td>Ryan Smith</td>
+														<td>Japan</td>
+														<td>Credit Card</td>
+														<td>*********8834</td>
+														<td>$200</td>
+														<td>Received</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>19/07/2014</td>
+														<td>Shaun Smith</td>
+														<td>Korea</td>
+														<td>Debit Card</td>
+														<td>*********3322</td>
+														<td>$200</td>
+														<td>Sent</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>19/08/2014</td>
+														<td>John Smith</td>
+														<td>Idaho</td>
+														<td>Account</td>
+														<td>*********2534</td>
+														<td>$300</td>
+														<td>Received</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>19/01/2015</td>
+														<td>Felipe Roch</td>
+														<td>Dominion Republic</td>
+														<td>Account</td>
+														<td>*********3322</td>
+														<td>$200</td>
+														<td>Sent</td>
+													</tr>
+													<tr>
+														<td>6</td>
+														<td>27/01/2015</td>
+														<td>Michael Parade</td>
+														<td>Peru</td>
+														<td>Debit Card</td>
+														<td>*********3322</td>
+														<td>$300</td>
+														<td>Sent</td>
+													</tr>
+
+													<tfoot>
+											            <tr>
+															<th>Transaction #</th>
+															<th>Trasnferred On</th>
+															<th>Friend Name</th>
+															<th>Country</th>
+															<th>Payment Mode</th>
+															<th>Payment Details</th>
+															<th>Amount</th>
+															<th>Action</th>
+														</tr>
+										        	</tfoot>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="row">
+								<div class="col-md-3">
+						    		<a class="info-tiles tiles-midnightblue" href="#">
+									    <div class="tiles-heading">
+									        <div class="pull-left">Total Sent</div>
+									    </div>
+									    <div class="tiles-body">
+									        <div class="pull-left"><i class="fa fa-dollar"></i></div>
+									        <div class="pull-right">$1000.00</div>
+									    </div>
+									</a>
+						    	</div>
+						    	<div class="col-md-3">
+						    		<a class="info-tiles tiles-primary" href="#">
+									    <div class="tiles-heading">
+									        <div class="pull-left">Total Received</div>
+									    </div>
+									    <div class="tiles-body">
+									        <div class="pull-left"><i class="fa fa-money"></i></div>
+									        <div class="pull-right">$500.00</div>
+									    </div>
+									</a>
+						    	</div>
+						    	<div class="col-md-3">
+						    		<a class="info-tiles tiles-orange" href="#">
+									    <div class="tiles-heading">
+									        <div class="pull-left">Sent To</div>
+									    </div>
+									    <div class="tiles-body">
+									        <div class="pull-left"><i class="fa fa-shopping-cart"></i></div>
+									        <div class="pull-right">4</div>
+									    </div>
+									</a>
+						    	</div>
+						    	<div class="col-md-3">
+						    		<a class="info-tiles tiles-danger" href="#">
+									    <div class="tiles-heading">
+									        <div class="pull-left">Received From</div>
+									    </div>
+									    <div class="tiles-body">
+									        <div class="pull-left"><i class="fa fa-group"></i></div>
+									        <div class="pull-right">2</div>
+									    </div>
+									</a>
+						    	</div>
+							</div> -->
+							<div class="row">
+									<div class="col-md-12 bs-grid">
+										<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+											<div class="panel-heading" role="heading">
+												<h2>Transactions</h2>
+											</div>
+											<div class="panel-body" role="content">
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="recentTrans2" style="width: 100%; height: 300px;" class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Recent Transaction</h2>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="lastMonth2" style="width: 100%; height: 300px; " class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Previous Month</h2>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="col-md-4">
+													<div class="panel-body">
+														<div id="overall2" style="width: 100%; height: 300px; " class="centered">
+														</div>
+														<div class="text-center">
+															<h2>Overall Transactions</h2>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 bs-grid">
+									<div class="panel panel-default panel-btn-focused" id="p1" data-widget-editbutton="false">
+										<div class="panel-heading">
+											<h2>
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#tab-visitor" data-toggle="tab"><i class="fa fa-user visible-xs"></i><span class="hidden-xs">Transaction Stats</span></a></li>
+													<li><a href="#tab-revenues" data-toggle="tab"><i class="fa fa-bar-chart-o visible-xs"></i><span class="hidden-xs">Monthly Stats</span></a></li>
+												</ul>
+											</h2>
+										</div>
+										<div class="panel-colorbox" style="display: none">
+											<ul class="list-unstyled list-inline panel-color-list">
+												<li><span data-widget-setstyle="panel-default"></span></li>
+												<li><span data-widget-setstyle="panel-inverse"></span></li>
+												<li><span data-widget-setstyle="panel-primary"></span></li>
+												<li><span data-widget-setstyle="panel-success"></span></li>
+												<li><span data-widget-setstyle="panel-warning"></span></li>
+												<li><span data-widget-setstyle="panel-danger"></span></li>
+												<li><span data-widget-setstyle="panel-info"></span></li>
+												<li><span data-widget-setstyle="panel-brown"></span></li>
+												<li><span data-widget-setstyle="panel-indigo"></span></li>
+												<li><span data-widget-setstyle="panel-orange"></span></li>
+												<li><span data-widget-setstyle="panel-midnightblue"></span></li>
+												<li><span data-widget-setstyle="panel-sky"></span></li>
+												<li><span data-widget-setstyle="panel-magenta"></span></li>
+												<li><span data-widget-setstyle="panel-purple"></span></li>
+												<li><span data-widget-setstyle="panel-green"></span></li>
+												<li><span data-widget-setstyle="panel-grape"></span></li>
+											</ul>
+										</div>
+										<div class="panel-body">
+											<div class="tab-content">
+												<div class="clearfix">
+													<button class="btn btn-default pull-left" id="daterangepicker2">
+														<i class="fa fa-calendar visible-xs"></i> 
+														<span class="hidden-xs" style="text-transform: uppercase;"><?php echo date("F j, Y", strtotime('-30 day')); ?> - <?php echo date("F j, Y"); ?></span> <b class="caret"></b>
+													</button>
+
+													<div class="btn-toolbar pull-right">
+														<div class="btn-group">
+															<a href='#' class="btn btn-default dropdown-toggle" data-toggle='dropdown'><i class="fa fa-cloud-download visible-xs"></i><span class="hidden-xs">Export as </span> <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li><a href="#">Text File (*.txt)</a></li>
+																<li><a href="#">Excel File (*.xlsx)</a></li>
+																<li><a href="#">PDF File (*.pdf)</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div id="tab-visitor" class="tab-pane active">
+													<div id="visitors-stats" style="height:250px;" class="demo-graph graph-1"></div>
+												</div>
+												<div id="tab-revenues" class="tab-pane">
+													<div id="revenues-stats" style="height: 250px;" class="demo-graph graph-2"></div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+				
+
+
+				<div id="data_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Data</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
+								<div class="col-md-12 bs-grid">
+									<div class="panel panel-default panel-btn-focused" id="p5">
+										<div class="panel-heading">
+											<h2>Total Global Remittances</h2>
+											<div class="panel-ctrls">
+												<input type="checkbox" class="js-switch-success switchery-xs" checked id="live-dynamic-switch" />
+												<i class="separator"></i>
+											</div>
+										</div>
+										<div class="panel-editbox" style="display: none">
+											<div class="form-horizontal">
+												<div class="form-group">
+													<div class="col-sm-12">
+														<input type="text" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel-colorbox" style="display: none">
+											<ul class="list-unstyled list-inline panel-color-list">
+												<li><span data-widget-setstyle="panel-default"></span></li>
+												<li><span data-widget-setstyle="panel-inverse"></span></li>
+												<li><span data-widget-setstyle="panel-primary"></span></li>
+												<li><span data-widget-setstyle="panel-success"></span></li>
+												<li><span data-widget-setstyle="panel-warning"></span></li>
+												<li><span data-widget-setstyle="panel-danger"></span></li>
+												<li><span data-widget-setstyle="panel-info"></span></li>
+												<li><span data-widget-setstyle="panel-brown"></span></li>
+												<li><span data-widget-setstyle="panel-indigo"></span></li>
+												<li><span data-widget-setstyle="panel-orange"></span></li>
+												<li><span data-widget-setstyle="panel-midnightblue"></span></li>
+												<li><span data-widget-setstyle="panel-sky"></span></li>
+												<li><span data-widget-setstyle="panel-magenta"></span></li>
+												<li><span data-widget-setstyle="panel-purple"></span></li>
+												<li><span data-widget-setstyle="panel-green"></span></li>
+												<li><span data-widget-setstyle="panel-grape"></span></li>
+											</ul>
+										</div>
+										<div class="panel-body">
+											<div id="server-load" style="height: 192px;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<div id="congrats_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Congratulations!</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel panel-toyo">
+										<div class="panel-heading">Money is on its way!</div>
+
+										<div class="panel-body">
+											<div class="col-xs-12">
+												<div class="alert alert-dismissable alert-success">
+													<i class="fa fa-fw fa-check"></i>&nbsp; <strong>Congratulations!</strong>  Your money is on its way! Your tracking number for this transaction is 12345678. A text has been sent to your recipient. You will also receive a confirmation via email and text. Thank you for using RemitMas.
+													<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				
+
+				<div id="savings_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Savings Toolkit </h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="container-fluid">
+						
+						<!-- <div class="store">
+							<div class="box"> -->
+								<div class="row">
+								<div class="col-md-12">
+									<div class="alert alert-dismissable alert-info">
+										<i class="fa fa-fw fa-info-circle"></i>&nbsp; The <strong> Savings Toolkit</strong> provides you with financial education tutorials. By completing these tutorials, you will be able to accrue points to receive free transfers and other rewards!
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									</div>
+								</div>
+								</div>
+							<!-- </div>
+						</div>	 -->
+						<div class="store">
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 10</span>Compound interest basics</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">Interest is the basis of modern capital markets. Depending on whether you are lending or borrowing, it can be viewed as a return on an asset (lending) or the cost of capital (borrowing). This tutorial gives an introduction to this fundamental concept, including what it means to compound. It also gives a rule of thumb that might make it easy to do some rough interest calculations in your head.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/Rm6UdfRs3gw?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Compound interest basics"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 8</span>Interest basics</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">This is a good introduction to the basic concept of interest. We will warn you that it is an older video so Sal's sound and handwriting weren't quite up to snuff then.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/GtaoP0skPWc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Interest basics"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 12</span>Credit cards and loans</a></h3>
+										<span class="label label-inverse mb10">Interest and debt</span>
+										<p class="mb20">Most of us have borrowed to buy something. Credit cards, in particular, can be quite convenient (but dangerous if not used in moderation). This tutorial explains credit card interest, how credit card companies make money and a far more silly way of borrowing money called "payday" loans.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/GtaoP0skPWc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Credit cards and loans"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 8</span>Cash versus accrual accounting</a></h3>
+										<span class="label label-inverse mb10">Accounting and financial statements</span>
+										<p class="mb20">Just keeping track of cash that goes in and out of a business doesn't always reflect what's going on. This tutorial compares cash and accrual accounting. Very valuable if you ever plan on starting or investing in any type of business (you might also discover a nascent passion for accounting).</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/LU_6amWC6H8?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Comparing accrual and cash accounting"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 12</span>Core financial statements</a></h3>
+										<span class="label label-inverse mb10">Accounting and financial statements</span>
+										<p class="mb20">Corporations use three financial statements to report what's going on: balance sheets, cash flow statements and income statements. They can be derived from each other and each give a valuable lens on the operations and condition of a business. After you know the basics of accrual accounting (available in another tutorial), this tutorial will give you tools you need to responsibly understand any business.</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/hZvjH3Az87A?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Balance sheet and income statement relationship"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 10</span>Inflation basics</a></h3>
+										<span class="label label-inverse mb10">Inflation</span>
+										<p class="mb20">$1 went a lot further in 1900 than today (you could probably buy a good meal for the family for $1 back then). Why? And how do we measure how much more expensive things have gotten (i.e., inflation)?</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/yahEP620480?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="What is inflation"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/videoImg.jpg" class="mb20 img-responsive">
+									</div>
+
+									<div class="col-sm-10">
+										<h3 class="product-title mt0 mb10"><a href="#"><span class="product-price label label-midnightblue">Points: 6</span>Inflation scenarios</a></h3>
+										<span class="label label-inverse mb10">Inflation</span>
+										<p class="mb20">You know about inflation, but now want to look at how thing might play out in different scenarios. This tutorial focuses on when inflation is "acceptable" and when it isn't (and the causes and repercussions).</p>
+									</div>
+								</div>
+								<div class="product-footer clearfix">
+									<div class="pull-right">
+										<a class="voverlay btn btn-default pull-right" id="mylink" href="http://www.youtube.com/v/Z_DcXewHHA8?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Moderate inflation in a good economy"><i class="fa fa-video-camera"></i>&nbsp; <span class="hidden-xs">Watch Video</span></a>
+   
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				
+				<div id="payment_details_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Payment Details</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+							<div class="row">
+
+								<div class="col-xs-12">
+									<div class="panel">
+										<div class="panel-heading">Debit Card Section</div>
+
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-xs-1">
+												</div>
+												<div class="col-xs-10">
+													<table cellpadding="0" cellspacing="0" border="0" id="cardDetailsSection" class="table table-striped">
+														<thead>
+															<tr>
+																<th>Card Holder</th>
+																<th>Card Number</th>
+																<th>Expiry</th>
+																<th>CVV</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- Modal -->
+											<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															<h2 class="modal-title">Debit Card Details</h2>
+														</div>
+														<div class="modal-body">
+															<div class="row">
+																<div class="col-sm-12">
+																	<div class="card-wrapper" id="card-wrapper2"></div>
+																</div>
+															</div>
+															<div class="row">
+															<p></p>
+															<p></p>
+															<p></p>
+															<p></p>
+															</div>
+															<div class="row">
+																<div class="col-sm-1">
+																</div>
+																<div class="col-sm-8">
+																	<div class="form-horizontal card" id="card2">
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Card Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Card number" type="text" name="number" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Full Name</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Full name" type="text" name="name" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Expiry</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="MM/YY" type="text" name="expiry" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">CVV</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="CVV" type="text" name="cvc" class="form-control">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-primary">Add Card</button>
+														</div>
+													</div><!-- /.modal-content -->
+												</div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="panel-footer">
+												<div class="row">
+													<div class="col-sm-2 col-sm-offset-10">
+														<a data-toggle="modal" href="#cardModal" class="btn-primary btn">Add Debit Card</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel">
+										<div class="panel-heading">Accounts Section</div>
+
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-xs-1">
+												</div>
+												<div class="col-xs-10">
+													<table cellpadding="0" cellspacing="0" border="0" id="accountDetailsSection" class="table table-striped">
+														<thead>
+															<tr>
+																<th>Account Holder</th>
+																<th>Bank Name</th>
+																<th>Account No.</th>
+																<th>Routing No.</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- Modal -->
+											<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															<h2 class="modal-title">Account Details</h2>
+														</div>
+														<div class="modal-body">
+															<div class="row">
+																<tr>
+																	<div class="checkImg">
+																	  <img alt="" src="images/blank_check.jpg" />
+																	  <div class="text senderC" id="senderC2" >
+																	   	
+																	  </div>
+																	  <div class="text accNoC" id="accNoC2">
+																	   	
+																	  </div>
+																	  <div class="text routingNoC" id="routingNoC2">
+
+																	  </div>
+																	  <div class="text bankC" id="bankC2">
+																	   		
+																	  </div>
+																	</div>
+																</tr>
+															</div>
+															<div class="row">
+															<p></p>
+															<p></p>
+															<p></p>
+															<p></p>
+															</div>
+															<div class="row">
+																<div class="col-sm-1">
+																</div>
+																<div class="col-sm-8">
+																	<div class="form-horizontal card" id="card2">
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Account Holder</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Account holder name" type="text" id="senderCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Bank Name</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Bank name" type="text" id="bankCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Account Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Account number" type="text" id="accNoCInput2" class="form-control">
+																			</div>
+																		</div>
+																		<div class="form-group">
+																			<label for="#" class="col-sm-4 control-label">Routing Number</label>	
+																			<div class="col-sm-8">
+																				<input placeholder="Routing number" type="text" id="routingNoCInput2" class="form-control">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-primary">Add Card</button>
+														</div>
+													</div><!-- /.modal-content -->
+												</div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="panel-footer">
+												<div class="row">
+													<div class="col-sm-2 col-sm-offset-10">
+														<a data-toggle="modal" href="#checkModal" class="btn-primary btn">Add Account</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="account_details_page" class="page-content">
+					<div class="page-heading">            
+						<h1>Account Details</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+						</div>
+					</div>
+				</div>
+
+
+
+				<footer role="contentinfo">
+					<div class="clearfix">
+						<ul class="list-unstyled list-inline pull-left">
+							<li><h6 style="margin: 0;"> &copy; 2015 RemitMas</h6></li>
+						</ul>
+						<button class="pull-right btn btn-link btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="infobar-wrapper">
+	<div class="infobar">
+
+		<div class="infobar-options">
+			<h2>Infobar</h2>
+		</div>
+
+		<div id="widgetarea">
+
+			<div class="widget">
+				<div class="widget-heading">
+					<a href="javascript:;" data-toggle="collapse" data-target="#recentactivity"><h4>Recent Activity</h4></a>
+				</div>
+				<div class="widget-body collapse in" id="recentactivity">
+					<ul class="recent-activities">
+						<li>
+							<div class="avatar">
+								<img src="images/avatar_11.png" class="img-responsive img-circle">
+                                    </div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Steven Pallickal</a> sent money to your <a href="#">account</a></span>
+								<span class="time">Sep 16, 2014 at 10:06 AM</span>
+                                
+							</div>
+						</li>
+						<li>
+							<div class="activityicon activity-success">
+								<i class="fa fa-cloud"></i>
+							</div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Daniela Hernandez</a> sent money to your <a href="#">account</a></span>
+								<span class="time">Sep 12, 2014 at 11:06 PM</span>
+                                
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<img src="images/avatar_07.png" class="img-responsive img-circle">
+                                    </div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Shannon Schmucker</a> is now a friend</span>
+								<span class="time">Sep 06, 2014 at 1:46 AM</span>
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<img src="images/avatar_01.png" class="img-responsive img-circle">
+                                    </div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Roxann Hollingworth</a> is now a friend</span>
+								<span class="time">Sep 02, 2014 at 7:50 PM</span>
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<img src="images/avatar_04.png" class="img-responsive img-circle">
+                                    </div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Mitchell Kosak</a> sent money to your <a href="#">account</a></span>
+								<span class="time">Sep 02, 2014 at 8:35 AM</span>
+                            </div>
+						</li>
+						<li>
+							<div class="avatar">
+								<img src="images/avatar_05.png" class="img-responsive img-circle">
+                                    </div>
+							<div class="content">
+								<span class="msg"><a href="#" class="person">Thomas Hill</a> is now a friend</span>
+								<span class="time">Jul 25, 2014 at 3:11 PM</span>
+							</div>
+						</li>
+						<li class="seeall">
+							<a href="#" class="pull-right">See all activities</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+
+	       
+    	</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var UserId= '<?php echo $User_id ?>'; 
+	var FullName= '<?php echo $Fullname ?>'; 
+</script>
+<script src="javascripts/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
+<script src="javascripts/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
+
+<script src="javascripts/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
+
+<script src="javascripts/plugins/jquery-slimscroll/jquery.slimscroll.js"></script> 	<!-- Slimscroll for custom scrolls -->
+<script src="javascripts/plugins/sparklines/jquery.sparklines.min.js"></script>  		<!-- Sparkline -->
+<script src="javascripts/plugins/jstree/dist/jstree.min.js"></script>  				<!-- jsTree -->
+
+<script src="javascripts/plugins/codeprettifier/prettify.js"></script> 				<!-- Code Prettifier  -->
+<script src="javascripts/plugins/bootstrap-switch/bootstrap-switch.js"></script> 		<!-- Swith/Toggle Button -->
+
+<script src="javascripts/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>  <!-- Bootstrap Tabdrop -->
+
+<script src="javascripts/plugins/iCheck/icheck.min.js"></script>     					<!-- iCheck -->
+
+<script src="javascripts/js/enquire.min.js"></script> 										<!-- Enquire for Responsiveness -->
+
+<script src="javascripts/plugins/bootbox/bootbox.js"></script>					<!-- BOOTBOX -->
+
+<script src="javascripts/js/application.js"></script>
+<script src="javascripts/demo/demo.js"></script>
+<script src="javascripts/demo/demo-switcher.js"></script>
+
+<script src="javascripts/plugins/simpleWeather/jquery.simpleWeather.min.js"></script> 
+
+<!-- End loading site level scripts -->
+    
+    <!-- Load page level scripts-->
+    
+<script src="javascripts/plugins/form-daterangepicker/daterangepicker.js"></script>     	<!-- Date Range Picker -->
+<script src="javascripts/plugins/form-daterangepicker/moment.min.js"></script>             <!-- Moment.js for Date Range Picker -->
+
+<script src="javascripts/plugins/easypiechart/jquery.easypiechart.js"></script> 			<!-- EasyPieChart -->
+<script src="javascripts/plugins/powerwidgets/js/powerwidgets.js"></script> 				<!-- PowerWidgets -->
+<script src="javascripts/plugins/switchery/switchery.js"></script>     					<!-- Switchery -->
+
+<!-- <script src="javascripts/plugins/fullcalendar/fullcalendar.min.js"></script>   			<!-- FullCalendar --> -->
+
+<!-- Charts -->
+<script src="javascripts/plugins/charts-flot/jquery.flot.min.js"></script>             	<!-- Flot Main File -->
+<script src="javascripts/plugins/charts-flot/jquery.flot.stack.min.js"></script>       	<!-- Flot Stacked Charts Plugin -->
+<script src="javascripts/plugins/charts-flot/jquery.flot.pie.min.js"></script>  
+<script src="javascripts/plugins/charts-flot/jquery.flot.orderBars.min.js"></script>   	<!-- Flot Ordered Bars Plugin-->
+<script src="javascripts/plugins/charts-flot/jquery.flot.resize.min.js"></script>          <!-- Flot Responsive -->
+<script src="javascripts/plugins/charts-flot/jquery.flot.tooltip.min.js"></script> 		<!-- Flot Tooltips -->
+
+<!-- Maps -->
+<script src="javascripts/plugins/jQuery-Mapael/js/raphael/raphael-min.js"></script>        <!-- Load Raphael as Dependency -->
+<script src="javascripts/plugins/jQuery-Mapael/js/jquery.mapael.js"></script>              <!-- jQuery Mapael -->
+<!-- <script src="assets/plugins/jQuery-mousewheel/jquery.mousewheel.min.js"></script> -->     <!-- Mousewheel Support in zoomed-in maps -->
+<script src="javascripts/plugins/jQuery-Mapael/js/maps/world_countries.js"></script>       <!-- Vector Data of World Countries -->
+
+<script src="javascripts/plugins/Ion.RangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>      <!-- Ion Range Slider -->
+<script src="javascripts/demo/demo-custom-ionrange.js"></script>
+<script src="javascripts/demo/demo-index.js"></script> 
+<script src="javascripts/demo/demo-flotgraph.js"></script>
+<script src="javascripts/plugins/form-stepy/jquery.stepy.js"></script>  								<!-- Stepy Plugin -->
+<script src="javascripts/plugins/card/lib/js/card.js"></script> 										<!-- Card -->
+
+<!-- <script type="text/javascript" src="javascripts/js/mootools.js"></script> -->
+<script type="text/javascript" src="javascripts/js/swfobject.js"></script>
+
+<script type="text/javascript" src="javascripts/js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="javascripts/js/videolightbox.js"></script>
+
+<script src="javascripts/js/uiPage.js"></script> 
+</html>
+
