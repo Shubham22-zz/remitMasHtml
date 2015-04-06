@@ -45,6 +45,10 @@ $(document).ready(function() {
 		sendMoney();
 	});
 
+	$('#walletsPageButton').click(function (event) {
+		seeWallets();
+	});
+
 	$('#transactionsPageButton').click(function (event) {
 		goToTransactions();
 	});
@@ -53,6 +57,7 @@ $(document).ready(function() {
 		$("#dashboard").hide();
 		$("#congrats_page").hide();
 		$("#send_page").hide();
+		$("#wallets_page").hide();
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
 		$("#account_details_page").hide();
@@ -64,6 +69,7 @@ $(document).ready(function() {
 		$("#dashboard").hide();
 		$("#congrats_page").hide();
 		$("#send_page").hide();
+		$("#wallets_page").hide();
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
 		$("#account_details_page").hide();
@@ -96,6 +102,7 @@ $(document).ready(function() {
 	$('#accountDetailsPageButton').click(function (event) {
 		$("#dashboard").hide();
 		$("#congrats_page").hide();
+		$("#wallets_page").hide();
 		$("#send_page").hide();
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
@@ -129,6 +136,7 @@ $(document).ready(function() {
 		// $(this).prop("disabled", true); 
 		$("#dashboard").hide();
 		$("#send_page").hide();
+		$("#wallets_page").hide();
 		$("#transactions_page").hide();
 		$("#savings_page").hide();
 		$("#data_page").hide();
@@ -224,6 +232,7 @@ $(document).ready(function() {
 function sendMoney () {
 	$("#dashboard").hide();
 	$("#congrats_page").hide();
+	$("#wallets_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
 	$("#savings_page").hide();
@@ -236,6 +245,7 @@ function goToTransactions (argument) {
 	$("#dashboard").hide();
 	$("#congrats_page").hide();
 	$("#send_page").hide();
+	$("#wallets_page").hide();
 	$("#data_page").hide();
 	$("#savings_page").hide();
 	$("#account_details_page").hide();
@@ -246,6 +256,7 @@ function goToTransactions (argument) {
 function seeTutorials (argument) {
 	$("#dashboard").hide();
 	$("#congrats_page").hide();
+	$("#wallets_page").hide();
 	$("#send_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
@@ -254,6 +265,17 @@ function seeTutorials (argument) {
 	$("#savings_page").show();
 }
 
+function seeWallets (argument) {
+	$("#dashboard").hide();
+	$("#congrats_page").hide();
+	$("#wallets_page").show();
+	$("#send_page").hide();
+	$("#transactions_page").hide();
+	$("#data_page").hide();
+	$("#account_details_page").hide();
+	$("#payment_details_page").hide();
+	$("#savings_page").hide();
+}
 
 
 function cardDetailClicked(e){

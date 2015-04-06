@@ -256,13 +256,9 @@
 										<li><a >Recipients</a></li>
 									</ul> -->
 								</li>
-								<li id="transactionsPageButton"><a href="javascript:;"><i class="fa fa-flask"></i>Transactions</a>
-									<!-- <ul class="acc-menu">
-										<li><a href="placeholder.html">Actual</a></li>
-										<li><a href="placeholder.html">Spent</a></li>
-										<li><a href="placeholder.html">Budget</a></li>
-									</ul> -->
-								</li>
+								<li id="walletsPageButton"><a href="javascript:;"><i><img src="images/wallet.png" style="width:15px; height:14px; opacity:.6; "></i> E-Wallets</a> </li>
+
+								<li id="transactionsPageButton"><a href="javascript:;"><i class="fa fa-flask"></i>Transactions</a> </li>
 								<li id="savingsPageButton" ><a href="javascript:;"><i class="fa fa-cogs"></i><span>Savings Toolkit</span></a>
 									<!-- <ul class="acc-menu">
 										<li><a href="placeholder.html">Tutorial Progress</a></li>
@@ -516,7 +512,7 @@
 
 														<div class="panel-body" role="content">
 															<div data-toggle="modal" href="#eduDashModal" class="col-md-12">
-																<div class="walletIcon fa fa-university fa-3x" style="color: #F68121;"></div>
+																<div class="walletIcon fa fa-graduation-cap fa-3x" style="color: #F68121;"></div>
 
 															</div>
 															<div class="text-center">
@@ -1457,6 +1453,807 @@
 				</div>
 				
 
+				<div id="wallets_page" class="page-content">
+					<div class="page-heading">            
+						<h1>E-Wallets</h1>
+						<div class="options">
+							<div class="btn-toolbar">
+								<a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div id="panel-advancedoptions">
+<!-- Wallet on transactions page -->
+							<div class="row">
+									<div class="col-md-12 bs-grid">
+										<!-- <div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget"> -->
+											<!-- <div class="panel-heading" role="heading">
+												<h2>My E-wallets</h2>
+											</div> -->
+											<div class="panel-body" role="content">
+
+												<div class="col-md-3 bs-grid">
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+													
+
+														<div class="panel-body" role="content">
+															
+															<div data-toggle="modal" href="#eduWalletModal" class="col-md-12">
+																<div class="walletIcon fa fa-graduation-cap fa-3x" style="color: #F68121;"></div>
+																	
+															</div>
+															<div class="text-center">
+																<h3>EDUCATION: $350</h3>
+															</div>
+														</div>
+														<!-- Education Modal -->
+														<div class="modal fade" id="eduWalletModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Education Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Education Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																									<tr>
+																										<td>19/08/2013</td>
+																										<td>Felipe Alvarez</td>
+																										<td>Columbia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$50</td>
+																									</tr>
+																									<tr>
+																										<td>19/12/2013</td>
+																										<td>Manuel Fuentes</td>
+																										<td>Colombia</td>
+																										<td>Credit Card</td>
+																										<td align="right">$80</td>
+																									</tr>
+																									<tr>
+																										<td>19/07/2014</td>
+																										<td>Diego Casa</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$50</td>
+																									</tr>
+																									<tr>
+																										<td>19/08/2014</td>
+																										<td>Alejandro Ronaldo</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$70</td>
+																									</tr>
+																									<tr>
+																										<td>19/01/2015</td>
+																										<td>Cristobal Vasquez</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$40</td>
+																									</tr>
+																									<tr>
+																										<td>27/01/2015</td>
+																										<td>Juan Garcia</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$60</td>
+																									</tr>
+																								</tbody>
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Education Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+											
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div  data-toggle="modal" href="#healthWalletModal" class="col-md-12">
+																<div class="walletIcon fa fa-medkit fa-3x" style="color:#E74C3C;"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HEALTHCARE: $330</h3>
+															</div>
+														</div>
+														<!-- Healthcare Modal -->
+														<div class="modal fade" id="healthWalletModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Healthcare Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Healthcare Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																									<tr>
+																										<td>19/08/2013</td>
+																										<td>Felipe Alvarez</td>
+																										<td>Columbia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$40</td>
+																									</tr>
+																									<tr>
+																										<td>19/12/2013</td>
+																										<td>Manuel Fuentes</td>
+																										<td>Colombia</td>
+																										<td>Credit Card</td>
+																										<td align="right">$50</td>
+																									</tr>
+																									<tr>
+																										<td>19/07/2014</td>
+																										<td>Diego Casa</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$40</td>
+																									</tr>
+																									<tr>
+																										<td>19/08/2014</td>
+																										<td>Alejandro Ronaldo</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$80</td>
+																									</tr>
+																									<tr>
+																										<td>19/01/2015</td>
+																										<td>Cristobal Vasquez</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$40</td>
+																									</tr>
+																									<tr>
+																										<td>27/01/2015</td>
+																										<td>Juan Garcia</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$80</td>
+																									</tr>
+																								</tbody>
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Healthcare Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#housingWalletModal" class="col-md-12">
+																<div class="walletIcon fa fa-home fa-3x" style="color:#024264"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>HOUSING: $360</h3>
+															</div>
+														</div>
+
+														<!-- Housing Modal -->
+														<div class="modal fade" id="housingWalletModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Housing Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Housing Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																									<tr>
+																										<td>19/08/2013</td>
+																										<td>Felipe Alvarez</td>
+																										<td>Columbia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>19/12/2013</td>
+																										<td>Manuel Fuentes</td>
+																										<td>Colombia</td>
+																										<td>Credit Card</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>19/07/2014</td>
+																										<td>Diego Casa</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>19/08/2014</td>
+																										<td>Alejandro Ronaldo</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>19/01/2015</td>
+																										<td>Cristobal Vasquez</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>27/01/2015</td>
+																										<td>Juan Garcia</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$60</td>
+																									</tr>
+																								</tbody>
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Housing Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+												<div class="col-md-3 bs-grid">
+													
+													<div class="panel panel-default" data-widget-editbutton="false" id="p1" role="widget">
+														<div class="panel-body" role="content">
+															<div data-toggle="modal" href="#cashWalletModal" class="col-md-12">
+																<div class="walletIcon fa fa-money fa-3x" style="color:#1F5D33"></div>
+
+															</div>
+															<div class="text-center">
+																<h3>CASH: $460</h3>
+															</div>
+														</div>
+														<!-- Cash Modal -->
+														<div class="modal fade" id="cashWalletModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h2 class="modal-title">Cash Wallet Details</h2>
+																	</div>
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="panel panel-default">
+																					<div class="panel-heading"><h2>Transaction List</h2></div>
+																					<div class="panel-body panel-no-padding">
+																					<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																							<thead>
+																								<tr>
+																									<th>Date</th>
+																									<th>Recepient Name</th>
+																									<th>Country</th>
+																									<th>Payment Mode</th>
+																									<th>Cash Amount</th>
+																								</tr>
+																							</thead>
+																							
+
+																							<tbody>
+																									<tr>
+																										<td>19/08/2013</td>
+																										<td>Felipe Alvarez</td>
+																										<td>Columbia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$150</td>
+																									</tr>
+																									<tr>
+																										<td>19/12/2013</td>
+																										<td>Manuel Fuentes</td>
+																										<td>Colombia</td>
+																										<td>Credit Card</td>
+																										<td align="right">$10</td>
+																									</tr>
+																									<tr>
+																										<td>19/07/2014</td>
+																										<td>Diego Casa</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$50</td>
+																									</tr>
+																									<tr>
+																										<td>19/08/2014</td>
+																										<td>Alejandro Ronaldo</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$90</td>
+																									</tr>
+																									<tr>
+																										<td>19/01/2015</td>
+																										<td>Cristobal Vasquez</td>
+																										<td>Colombia</td>
+																										<td>Account</td>
+																										<td align="right">$60</td>
+																									</tr>
+																									<tr>
+																										<td>27/01/2015</td>
+																										<td>Juan Garcia</td>
+																										<td>Colombia</td>
+																										<td>Debit Card</td>
+																										<td align="right">$100</td>
+																									</tr>
+																								</tbody>
+
+																								<tfoot>
+																						            <tr>
+																										<th>Date</th>
+																										<th>Recepient Name</th>
+																										<th>Country</th>
+																										<th>Payment Mode</th>
+																										<th>Cash Amount</th>
+																									</tr>
+																					        	</tfoot>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																			
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																	</div>
+																</div><!-- /.modal-content -->
+															</div><!-- /.modal-dialog -->
+														</div>
+														<!--  -->
+													</div>
+												</div>
+
+											</div>
+										<!-- </div> -->
+									</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel panel-toyo">
+										<div class="panel-heading">
+											<h2>Wallets Details</h2>
+										</div>
+										<div class="panel-body">
+											<div class="accordion-group" id="accordionB">
+												<div class="panel accordion-item">
+													<a class="accordion-title" data-toggle="collapse" data-parent="#accordionB" href="#collapseaOne"><h2>Education Wallet</h2></a>
+													<div id="collapseaOne" class="collapse in">
+														<div class="accordion-body">
+															<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																<thead>
+																	<tr>
+																		<th>Date</th>
+																		<th>Recepient Name</th>
+																		<th>Country</th>
+																		<th>Payment Mode</th>
+																		<th>Education Amount</th>
+																	</tr>
+																</thead>
+																
+
+																<tbody>
+																		<tr>
+																			<td>19/08/2013</td>
+																			<td>Felipe Alvarez</td>
+																			<td>Columbia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$50</td>
+																		</tr>
+																		<tr>
+																			<td>19/12/2013</td>
+																			<td>Manuel Fuentes</td>
+																			<td>Colombia</td>
+																			<td>Credit Card</td>
+																			<td align="right">$80</td>
+																		</tr>
+																		<tr>
+																			<td>19/07/2014</td>
+																			<td>Diego Casa</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$50</td>
+																		</tr>
+																		<tr>
+																			<td>19/08/2014</td>
+																			<td>Alejandro Ronaldo</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$70</td>
+																		</tr>
+																		<tr>
+																			<td>19/01/2015</td>
+																			<td>Cristobal Vasquez</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$40</td>
+																		</tr>
+																		<tr>
+																			<td>27/01/2015</td>
+																			<td>Juan Garcia</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$60</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+															            <tr>
+																			<th>Date</th>
+																			<th>Recepient Name</th>
+																			<th>Country</th>
+																			<th>Payment Mode</th>
+																			<th>Education Amount</th>
+																		</tr>
+														        	</tfoot>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel accordion-item">
+													<a class="accordion-title" data-toggle="collapse" data-parent="#accordionB" href="#collapseaTwo"><h2>Healthcare Wallet</h2></a>
+													<div id="collapseaTwo" class="collapse">
+														<div class="accordion-body">
+															<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																<thead>
+																	<tr>
+																		<th>Date</th>
+																		<th>Recepient Name</th>
+																		<th>Country</th>
+																		<th>Payment Mode</th>
+																		<th>Healthcare Amount</th>
+																	</tr>
+																</thead>
+																
+
+																<tbody>
+																		<tr>
+																			<td>19/08/2013</td>
+																			<td>Felipe Alvarez</td>
+																			<td>Columbia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$40</td>
+																		</tr>
+																		<tr>
+																			<td>19/12/2013</td>
+																			<td>Manuel Fuentes</td>
+																			<td>Colombia</td>
+																			<td>Credit Card</td>
+																			<td align="right">$50</td>
+																		</tr>
+																		<tr>
+																			<td>19/07/2014</td>
+																			<td>Diego Casa</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$40</td>
+																		</tr>
+																		<tr>
+																			<td>19/08/2014</td>
+																			<td>Alejandro Ronaldo</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$80</td>
+																		</tr>
+																		<tr>
+																			<td>19/01/2015</td>
+																			<td>Cristobal Vasquez</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$40</td>
+																		</tr>
+																		<tr>
+																			<td>27/01/2015</td>
+																			<td>Juan Garcia</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$80</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+															            <tr>
+																			<th>Date</th>
+																			<th>Recepient Name</th>
+																			<th>Country</th>
+																			<th>Payment Mode</th>
+																			<th>Healthcare Amount</th>
+																		</tr>
+														        	</tfoot>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel accordion-item">
+													<a class="accordion-title" data-toggle="collapse" data-parent="#accordionB" href="#collapseaThree"><h2>Housing Wallet</h2></a>
+													<div id="collapseaThree" class="collapse">
+														<div class="accordion-body">
+															<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																<thead>
+																	<tr>
+																		<th>Date</th>
+																		<th>Recepient Name</th>
+																		<th>Country</th>
+																		<th>Payment Mode</th>
+																		<th>Housing Amount</th>
+																	</tr>
+																</thead>
+																
+
+																<tbody>
+																		<tr>
+																			<td>19/08/2013</td>
+																			<td>Felipe Alvarez</td>
+																			<td>Columbia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>19/12/2013</td>
+																			<td>Manuel Fuentes</td>
+																			<td>Colombia</td>
+																			<td>Credit Card</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>19/07/2014</td>
+																			<td>Diego Casa</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>19/08/2014</td>
+																			<td>Alejandro Ronaldo</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>19/01/2015</td>
+																			<td>Cristobal Vasquez</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>27/01/2015</td>
+																			<td>Juan Garcia</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$60</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+															            <tr>
+																			<th>Date</th>
+																			<th>Recepient Name</th>
+																			<th>Country</th>
+																			<th>Payment Mode</th>
+																			<th>Housing Amount</th>
+																		</tr>
+														        	</tfoot>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel accordion-item">
+													<a class="accordion-title" data-toggle="collapse" data-parent="#accordionB" href="#collapseaFour"><h2>Cash Wallet</h2></a>
+													<div id="collapseaFour" class="collapse">
+														<div class="accordion-body">
+															<table id="example" class="table table-striped table-bordered" cellspacing="0" >
+
+																<thead>
+																	<tr>
+																		<th>Date</th>
+																		<th>Recepient Name</th>
+																		<th>Country</th>
+																		<th>Payment Mode</th>
+																		<th>Cash Amount</th>
+																	</tr>
+																</thead>
+																
+
+																<tbody>
+																		<tr>
+																			<td>19/08/2013</td>
+																			<td>Felipe Alvarez</td>
+																			<td>Columbia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$150</td>
+																		</tr>
+																		<tr>
+																			<td>19/12/2013</td>
+																			<td>Manuel Fuentes</td>
+																			<td>Colombia</td>
+																			<td>Credit Card</td>
+																			<td align="right">$10</td>
+																		</tr>
+																		<tr>
+																			<td>19/07/2014</td>
+																			<td>Diego Casa</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$50</td>
+																		</tr>
+																		<tr>
+																			<td>19/08/2014</td>
+																			<td>Alejandro Ronaldo</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$90</td>
+																		</tr>
+																		<tr>
+																			<td>19/01/2015</td>
+																			<td>Cristobal Vasquez</td>
+																			<td>Colombia</td>
+																			<td>Account</td>
+																			<td align="right">$60</td>
+																		</tr>
+																		<tr>
+																			<td>27/01/2015</td>
+																			<td>Juan Garcia</td>
+																			<td>Colombia</td>
+																			<td>Debit Card</td>
+																			<td align="right">$100</td>
+																		</tr>
+																	</tbody>
+
+																	<tfoot>
+															            <tr>
+																			<th>Date</th>
+																			<th>Recepient Name</th>
+																			<th>Country</th>
+																			<th>Payment Mode</th>
+																			<th>Cash Amount</th>
+																		</tr>
+														        	</tfoot>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+						</div>
+					</div>
+				</div>
+
+
 				<div id="transactions_page" class="page-content">
 					<div class="page-heading">            
 						<h1>Transactions</h1>
@@ -1484,7 +2281,7 @@
 														<div class="panel-body" role="content">
 															
 															<div data-toggle="modal" href="#eduModal" class="col-md-12">
-																<div class="walletIcon fa fa-university fa-3x" style="color: #F68121;"></div>
+																<div class="walletIcon fa fa-graduation-cap fa-3x" style="color: #F68121;"></div>
 																	
 															</div>
 															<div class="text-center">
