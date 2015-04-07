@@ -2,6 +2,7 @@ $(document).ready(function() {
 	// console.log("kuch toh hai");
 	$("#congrats_page").hide();
 	$("#send_page").hide();
+	$("#wallets_page").hide();
 	$("#transactions_page").hide();
 	$("#data_page").hide();
 	$("#savings_page").hide();
@@ -36,6 +37,7 @@ $(document).ready(function() {
 		$("#data_page").hide();
 		$("#savings_page").hide();
 		$("#send_page").hide();
+		$("#wallets_page").hide();
 		$("#account_details_page").hide();
 		$("#payment_details_page").hide();
 		$("#dashboard").show();
